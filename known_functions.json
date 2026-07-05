@@ -1,0 +1,4512 @@
+{
+ "_note": "Observed signatures mined from FS25 + GE editor corpus call-sites; param names are inferred from argument expressions, not official. source=game-binding means the signature is the official FS25 binding.",
+ "count": 751,
+ "signatures": {
+  "initAchievements": {
+   "sig": "initAchievements(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "areAchievementsAvailable": {
+   "sig": "areAchievementsAvailable()",
+   "source": "observed",
+   "calls": 7,
+   "arity": "0"
+  },
+  "getAchievement": {
+   "sig": "getAchievement(id)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "hasNativeAchievementGUI": {
+   "sig": "hasNativeAchievementGUI()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setAchievementProgress": {
+   "sig": "setAchievementProgress(id, score, targetScore)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "3"
+  },
+  "getHaveAchievementsChanged": {
+   "sig": "getHaveAchievementsChanged()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "fileExists": {
+   "sig": "fileExists(arg1)",
+   "source": "observed",
+   "calls": 82,
+   "arity": "1"
+  },
+  "addRoadsToVehicleNavigationMap": {
+   "sig": "addRoadsToVehicleNavigationMap(navigationMap, arg2, arg3, arg4, arg5)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "removeRoadsFromVehicleNavigationMap": {
+   "sig": "removeRoadsFromVehicleNavigationMap(navigationMap, spline)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "addVehicleNavigationWorldBlockingRegion": {
+   "sig": "addVehicleNavigationWorldBlockingRegion(navigationMap, x, y, z, rx, ry, rz, sizeX, sizeY, sizeZ, stopDistance, callbackFuncName, callbackTarget)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "13"
+  },
+  "removeVehicleNavigationWorldBlockingRegion": {
+   "sig": "removeVehicleNavigationWorldBlockingRegion(navigationMap, blockingRegionId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setVehicleNavigationWorldBlockingRegionState": {
+   "sig": "setVehicleNavigationWorldBlockingRegionState(navigationMap, blockingRegionId, isBlocking)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "createVehicleNavigationMap": {
+   "sig": "createVehicleNavigationMap(cellSizeMeters, terrainNode, maxSlopeAngle, infoLayerName, infoLayerChannel, aiDrivableCollisionMask, obstacleCollisionMask, vehicleMaxHeight, isLeftHandTraffic)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "9"
+  },
+  "loadVehicleNavigationCostMapFromFile": {
+   "sig": "loadVehicleNavigationCostMapFromFile(navigationMap, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "updateVehicleNavigationMap": {
+   "sig": "updateVehicleNavigationMap(navigationMap, minX, maxX, minZ, maxZ)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "5"
+  },
+  "getVehicleNavigationMapCostAtWorldPos": {
+   "sig": "getVehicleNavigationMapCostAtWorldPos(navigationMap, x, y, z)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "4"
+  },
+  "addVehicleNavigationPhysicsObstacle": {
+   "sig": "addVehicleNavigationPhysicsObstacle(navigationMap, node, centerOffsetX, centerOffsetY, centerOffsetZ, sizeX, sizeY, sizeZ, brakeAcceleration)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "9"
+  },
+  "setVehicleNavigationPhysicsObstacleIsPassable": {
+   "sig": "setVehicleNavigationPhysicsObstacleIsPassable(navigationMap, node, isPassable)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "3"
+  },
+  "removeVehicleNavigationPhysicsObstacle": {
+   "sig": "removeVehicleNavigationPhysicsObstacle(navigationMap, node)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "getBitVectorMapSize": {
+   "sig": "getBitVectorMapSize(bitVectorMap)",
+   "source": "observed",
+   "calls": 19,
+   "arity": "1"
+  },
+  "getBitVectorMapPoint": {
+   "sig": "getBitVectorMapPoint(bitVectorMap, arg2, arg3, firstChannel, numChannels)",
+   "source": "observed",
+   "calls": 26,
+   "arity": "5"
+  },
+  "getVehicleNavigationAgentNextCurvature": {
+   "sig": "getVehicleNavigationAgentNextCurvature(agentId, poseData?, abs?)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1..3"
+  },
+  "enableVehicleNavigationMapDebugRendering": {
+   "sig": "enableVehicleNavigationMapDebugRendering(navigationMap, mapDebugRenderingEnabled)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "createFolder": {
+   "sig": "createFolder(mFilePath)",
+   "source": "observed",
+   "calls": 30,
+   "arity": "1"
+  },
+  "getDate": {
+   "sig": "getDate(string)",
+   "source": "observed",
+   "calls": 32,
+   "arity": "1"
+  },
+  "beginVehicleNavigationDebugLogging": {
+   "sig": "beginVehicleNavigationDebugLogging(agentId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "beginVehicleNavigationPlannerRecording": {
+   "sig": "beginVehicleNavigationPlannerRecording(agentId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "endVehicleNavigationDebugLogging": {
+   "sig": "endVehicleNavigationDebugLogging(agentId, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "endVehicleNavigationPlannerRecording": {
+   "sig": "endVehicleNavigationPlannerRecording(agentId, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "getNumOfLanguages": {
+   "sig": "getNumOfLanguages()",
+   "source": "observed",
+   "calls": 14,
+   "arity": "0"
+  },
+  "getLanguageCode": {
+   "sig": "getLanguageCode(arg1)",
+   "source": "observed",
+   "calls": 13,
+   "arity": "1"
+  },
+  "audioFileExists": {
+   "sig": "audioFileExists(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "checkFacialAnimScript": {
+   "sig": "checkFacialAnimScript(arg1, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "checkFacialAnimAudioFile": {
+   "sig": "checkFacialAnimAudioFile(arg1, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "getDateDiffSeconds": {
+   "sig": "getDateDiffSeconds(time, time, time, time, time, int, arg7, arg8, arg9, int, int, int)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "12"
+  },
+  "createAnimalCompanionManager": {
+   "sig": "createAnimalCompanionManager(DOG, arg2, string, arg4, arg5, arg6, g_terrainNode, isServer, isClient, numAnimals, ENVIRONMENT)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "11"
+  },
+  "setCompanionWaterDetectionOffset": {
+   "sig": "setCompanionWaterDetectionOffset(dogInstance, float)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setCompanionTrigger": {
+   "sig": "setCompanionTrigger(dogInstance, animalId, string, arg4)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "setCompanionTextureTile": {
+   "sig": "setCompanionTextureTile(dogInstance, animalId, tileIndexU, tileIndexV)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "4"
+  },
+  "setCompanionCollisionMask": {
+   "sig": "setCompanionCollisionMask(arg1, arg2, arg3, WATER)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "4"
+  },
+  "setCompanionUseOutdoorAudioSetup": {
+   "sig": "setCompanionUseOutdoorAudioSetup(dogInstance, getIsIndoor)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "writeAnimalCompanionManagerToStream": {
+   "sig": "writeAnimalCompanionManagerToStream(dogInstance, streamId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "readAnimalCompanionManagerFromStream": {
+   "sig": "readAnimalCompanionManagerFromStream(dogInstance, streamId, g_clientInterpDelay, g_packetPhysicsNetworkTime, tickDuration)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "getAnimalCompanionNeedNetworkUpdate": {
+   "sig": "getAnimalCompanionNeedNetworkUpdate(dogInstance)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getCompanionClosestDistance": {
+   "sig": "getCompanionClosestDistance(dogInstance, x, y, z)",
+   "source": "observed",
+   "calls": 7,
+   "arity": "4"
+  },
+  "setCompanionDaytime": {
+   "sig": "setCompanionDaytime(dogInstance, dayTime)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setCompanionsVisibility": {
+   "sig": "setCompanionsVisibility(dogInstance, state)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setCompanionsPhysicsUpdate": {
+   "sig": "setCompanionsPhysicsUpdate(dogInstance, state)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setCompanionBehaviorFollowEntity": {
+   "sig": "setCompanionBehaviorFollowEntity(dogInstance, animalId, entityFollow)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "setCompanionBehaviorGotoEntity": {
+   "sig": "setCompanionBehaviorGotoEntity(dogInstance, animalId, getSpawnNode)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "setCompanionBehaviorFeed": {
+   "sig": "setCompanionBehaviorFeed(dogInstance, animalId, foodBowlNode)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "setCompanionBehaviorFetch": {
+   "sig": "setCompanionBehaviorFetch(dogInstance, animalId, nodeId, rootNode)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "setCompanionBehaviorPet": {
+   "sig": "setCompanionBehaviorPet(dogInstance, animalId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setCompanionBehaviorDefault": {
+   "sig": "setCompanionBehaviorDefault(dogInstance, animalId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setCompanionPosition": {
+   "sig": "setCompanionPosition(dogInstance, animalId, spawnX, spawnY, spawnZ)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "removeHusbandryAnimal": {
+   "sig": "removeHusbandryAnimal(husbandryId, arg2)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "2"
+  },
+  "setAnimalDaytime": {
+   "sig": "setAnimalDaytime(husbandryId, dayTime)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "isHusbandryReady": {
+   "sig": "isHusbandryReady(husbandryId)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "createAnimalHusbandry": {
+   "sig": "createAnimalHusbandry(animalTypeName, arg2?, arg3?, raycastDistance?, arg5?, collisionMask?, ENVIRONMENT?)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1..7"
+  },
+  "setAnimalSubType": {
+   "sig": "setAnimalSubType(husbandryId, arg2, arg3)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "addHusbandryAnimal": {
+   "sig": "addHusbandryAnimal(husbandryId, visualAnimalIndex)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "2"
+  },
+  "setAnimalTextureTile": {
+   "sig": "setAnimalTextureTile(husbandryId, arg2, tileUIndex, tileVIndex)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "getAnimalRootNode": {
+   "sig": "getAnimalRootNode(husbandryId, arg2)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "getAnimalShaderParameter": {
+   "sig": "getAnimalShaderParameter(husbandryId, arg2, string)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "3"
+  },
+  "getAnimalPosition": {
+   "sig": "getAnimalPosition(husbandryId, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "getAnimalRotation": {
+   "sig": "getAnimalRotation(husbandryId, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setAnimalUseOutdoorAudioSetup": {
+   "sig": "setAnimalUseOutdoorAudioSetup(husbandryId, getIsIndoor)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "2"
+  },
+  "getNavMeshSurfaceArea": {
+   "sig": "getNavMeshSurfaceArea(navigationMesh)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "addFeedingPlace": {
+   "sig": "addFeedingPlace(husbandryId, node, int, arg4)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "4"
+  },
+  "updateFeedingPlace": {
+   "sig": "updateFeedingPlace(husbandryId, place, arg3)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "3"
+  },
+  "setCompanionAvoidPlayer": {
+   "sig": "setCompanionAvoidPlayer(companionId, arg2, fleeDistance)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "isCompanionReady": {
+   "sig": "isCompanionReady(companionId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getCompanionNodes": {
+   "sig": "getCompanionNodes(companionId)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "getIsSplitShapeSplit": {
+   "sig": "getIsSplitShapeSplit(transformId)",
+   "source": "observed",
+   "calls": 12,
+   "arity": "1"
+  },
+  "traceOn": {
+   "sig": "traceOn(int)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "traceOff": {
+   "sig": "traceOff()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "openIntervalTimer": {
+   "sig": "openIntervalTimer()",
+   "source": "observed",
+   "calls": 4,
+   "arity": "0"
+  },
+  "readIntervalTimerMs": {
+   "sig": "readIntervalTimerMs(arg1)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "1"
+  },
+  "closeIntervalTimer": {
+   "sig": "closeIntervalTimer(arg1)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "1"
+  },
+  "setStreamLowPriorityI3DFiles": {
+   "sig": "setStreamLowPriorityI3DFiles(bool)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "netSetIsEventProcessingEnabled": {
+   "sig": "netSetIsEventProcessingEnabled(bool)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "setTextureStreamingPaused": {
+   "sig": "setTextureStreamingPaused(bool)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "simulateParticleSystems": {
+   "sig": "simulateParticleSystems(bool)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "new2DLayer": {
+   "sig": "new2DLayer()",
+   "source": "observed",
+   "calls": 14,
+   "arity": "0"
+  },
+  "render360Screenshot": {
+   "sig": "render360Screenshot(arg1, arg2, string, int, int, int, int, int, int, bool, int)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "11"
+  },
+  "setVirtualTerrainUpdateEnabled": {
+   "sig": "setVirtualTerrainUpdateEnabled(g_terrainNode, bool)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "setLowResCollisionHandlerHighPrioriyUpdateArea": {
+   "sig": "setLowResCollisionHandlerHighPrioriyUpdateArea(int)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "drawDebugTriangle": {
+   "sig": "drawDebugTriangle(x, arg2, z, arg4, arg5, arg6, arg7, arg8, arg9, r, g, b, a, solid)",
+   "source": "observed",
+   "calls": 57,
+   "arity": "14"
+  },
+  "drawDebugPolygon": {
+   "sig": "drawDebugPolygon(positions, r, g, b, a, bool)",
+   "source": "observed",
+   "calls": 7,
+   "arity": "6"
+  },
+  "setEnablePostFx": {
+   "sig": "setEnablePostFx(bool)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "renderShapeOutline": {
+   "sig": "renderShapeOutline(arg1, bool)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "2"
+  },
+  "setSplitShapesLoadingFileId": {
+   "sig": "setSplitShapesLoadingFileId(splitShapeLoadingFileId)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "1"
+  },
+  "setSplitShapesNextFileId": {
+   "sig": "setSplitShapesNextFileId(bool?)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "0..1"
+  },
+  "getNetworkError": {
+   "sig": "getNetworkError()",
+   "source": "observed",
+   "calls": 16,
+   "arity": "0"
+  },
+  "getMultiplayerAvailability": {
+   "sig": "getMultiplayerAvailability()",
+   "source": "observed",
+   "calls": 8,
+   "arity": "0"
+  },
+  "getCrossPlayAvailability": {
+   "sig": "getCrossPlayAvailability(bool)",
+   "source": "observed",
+   "calls": 6,
+   "arity": "1"
+  },
+  "getModDownloadAvailability": {
+   "sig": "getModDownloadAvailability()",
+   "source": "observed",
+   "calls": 4,
+   "arity": "0"
+  },
+  "openMpFriendInvitation": {
+   "sig": "openMpFriendInvitation(getUsers, capacity)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "2"
+  },
+  "getHdrAvailable": {
+   "sig": "getHdrAvailable()",
+   "source": "observed",
+   "calls": 8,
+   "arity": "0"
+  },
+  "getTerrainNumOfLayers": {
+   "sig": "getTerrainNumOfLayers(g_terrainNode)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "getTerrainLayerXmlAttribute": {
+   "sig": "getTerrainLayerXmlAttribute(g_terrainNode, arg2, arg3)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "getTerrainLayerAtWorldPos": {
+   "sig": "getTerrainLayerAtWorldPos(g_terrainNode, arg2, arg3, int, arg5)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "getTerrainLayerName": {
+   "sig": "getTerrainLayerName(g_terrainNode, i)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "2"
+  },
+  "renderText3D": {
+   "sig": "renderText3D(x, y, z, rx, ry, rz, size, text)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "8"
+  },
+  "setOutlineColor": {
+   "sig": "setOutlineColor(unpack)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "inAppInit": {
+   "sig": "inAppInit(xmlPath)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "inAppIsLoaded": {
+   "sig": "inAppIsLoaded()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "inAppGetProductPrice": {
+   "sig": "inAppGetProductPrice(productId)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "inAppGetProductDescription": {
+   "sig": "inAppGetProductDescription(productId)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "inAppStartPurchase": {
+   "sig": "inAppStartPurchase(getId, string, arg3)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "3"
+  },
+  "inAppFinishPurchase": {
+   "sig": "inAppFinishPurchase(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "inAppGetNumPendingPurchases": {
+   "sig": "inAppGetNumPendingPurchases()",
+   "source": "observed",
+   "calls": 6,
+   "arity": "0"
+  },
+  "inAppGetPendingPurchaseProductId": {
+   "sig": "inAppGetPendingPurchaseProductId(arg1)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "1"
+  },
+  "inAppFinishPendingPurchase": {
+   "sig": "inAppFinishPendingPurchase(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "getPlatformId": {
+   "sig": "getPlatformId()",
+   "source": "observed",
+   "calls": 26,
+   "arity": "0"
+  },
+  "imeIsSupported": {
+   "sig": "imeIsSupported()",
+   "source": "observed",
+   "calls": 3,
+   "arity": "0"
+  },
+  "imeAbort": {
+   "sig": "imeAbort()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "imeOpen": {
+   "sig": "imeOpen(text, imeTitle, imeDescription, imePlaceholder, arg5, maxCharacters, arg7, arg8, arg9, arg10)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "10"
+  },
+  "imeIsComplete": {
+   "sig": "imeIsComplete()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "imeGetLastString": {
+   "sig": "imeGetLastString()",
+   "source": "observed",
+   "calls": 3,
+   "arity": "0"
+  },
+  "userSignout": {
+   "sig": "userSignout()",
+   "source": "observed",
+   "calls": 3,
+   "arity": "0"
+  },
+  "requestUserSignin": {
+   "sig": "requestUserSignin()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "getIsUserSignedIn": {
+   "sig": "getIsUserSignedIn()",
+   "source": "observed",
+   "calls": 7,
+   "arity": "0"
+  },
+  "showNetflixButton": {
+   "sig": "showNetflixButton()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "hideNetflixButton": {
+   "sig": "hideNetflixButton()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "createBitVectorMap": {
+   "sig": "createBitVectorMap(name)",
+   "source": "observed",
+   "calls": 14,
+   "arity": "1"
+  },
+  "loadBitVectorMapNew": {
+   "sig": "loadBitVectorMapNew(bitVectorMap, width, height, numChannels, bool)",
+   "source": "observed",
+   "calls": 12,
+   "arity": "5"
+  },
+  "setBitVectorMapParallelogram": {
+   "sig": "setBitVectorMapParallelogram(arg1, arg2, arg3, float, int, int, float, firstChannel, int, value, roundingMode?)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "10..11"
+  },
+  "findAndRemoveSplitShapeAttachments": {
+   "sig": "findAndRemoveSplitShapeAttachments(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, float, arg11, arg12)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "12"
+  },
+  "findSplitShape": {
+   "sig": "findSplitShape(arg1, y, arg3, int, int, int, int, int, int, cutSizeY, cutSizeZ)",
+   "source": "observed",
+   "calls": 10,
+   "arity": "11"
+  },
+  "testSplitShape": {
+   "sig": "testSplitShape(curSplitShape, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, cutSizeY, cutSizeZ)",
+   "source": "observed",
+   "calls": 12,
+   "arity": "12"
+  },
+  "getDensityMapMaxHeight": {
+   "sig": "getDensityMapMaxHeight(terrainDetailHeightId)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "getDensityMapHeightNumChannels": {
+   "sig": "getDensityMapHeightNumChannels(detailHeightId)",
+   "source": "observed",
+   "calls": 6,
+   "arity": "1"
+  },
+  "getDensityMapHeightFirstChannel": {
+   "sig": "getDensityMapHeightFirstChannel(detailHeightId)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "1"
+  },
+  "createDensityMapHeightUpdater": {
+   "sig": "createDensityMapHeightUpdater(string, arg2, arg3, arg4, arg5, arg6)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "6"
+  },
+  "setDensityMapHeightTypeProperties": {
+   "sig": "setDensityMapHeightTypeProperties(terrainDetailHeightUpdater, index, arg3, maxSurfaceAngle, collisionScale, collisionBaseOffset, minCollisionOffset, maxCollisionOffset)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "8"
+  },
+  "initDensityMapHeightTypeProperties": {
+   "sig": "initDensityMapHeightTypeProperties(terrainDetailHeightUpdater, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "loadBitVectorMapFromFile": {
+   "sig": "loadBitVectorMapFromFile(map, path, numChannels)",
+   "source": "observed",
+   "calls": 13,
+   "arity": "3"
+  },
+  "setDensityMapHeightCollisionMap": {
+   "sig": "setDensityMapHeightCollisionMap(terrainDetailHeightUpdater, tipCollisionMap, bool)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "3"
+  },
+  "saveBitVectorMapToFile": {
+   "sig": "saveBitVectorMapToFile(bitVector, filename)",
+   "source": "observed",
+   "calls": 8,
+   "arity": "2"
+  },
+  "prepareSaveBitVectorMapToFile": {
+   "sig": "prepareSaveBitVectorMapToFile(map, filename)",
+   "source": "observed",
+   "calls": 6,
+   "arity": "2"
+  },
+  "savePreparedBitVectorMapToFile": {
+   "sig": "savePreparedBitVectorMapToFile(arg1, callback, callbackObject)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "3"
+  },
+  "updateTerrainCollisionMap": {
+   "sig": "updateTerrainCollisionMap(arg1, arg2, string, int, arg5, terrainHalfSize, terrainHalfSize, terrainHalfSize, terrainHalfSize, bool)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "10"
+  },
+  "updatePlacementCollisionMap": {
+   "sig": "updatePlacementCollisionMap(arg1, arg2, string, int, arg5, terrainHalfSize, terrainHalfSize, terrainHalfSize, terrainHalfSize, bool)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "10"
+  },
+  "getDensityMapHeightTypeAtWorldLine": {
+   "sig": "getDensityMapHeightTypeAtWorldLine(getTerrainDetailHeightUpdater, sx, sy, sz, ex, ey, ez, radius)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "8"
+  },
+  "getDensityMapCollisionHeightAtWorldPos": {
+   "sig": "getDensityMapCollisionHeightAtWorldPos(getTerrainDetailHeightUpdater, x, y, z)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "addDensityMapHeightOcclusionArea": {
+   "sig": "addDensityMapHeightOcclusionArea(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, bool)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "11"
+  },
+  "addDensityMapHeightAtWorldLine": {
+   "sig": "addDensityMapHeightAtWorldLine(arg1, sx, sy, sz, ex, ey, ez, arg8, index, arg10, radius, limitToLineHeight, arg13, arg14, tireTrackSystemId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "15"
+  },
+  "getDensityMapHeightTypeAtWorldPos": {
+   "sig": "getDensityMapHeightTypeAtWorldPos(terrainDetailHeightUpdater, x, y, z, radius)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "5"
+  },
+  "smoothDensityMapHeightAtWorldPos": {
+   "sig": "smoothDensityMapHeightAtWorldPos(arg1, x, collisionBaseOffset, z, arg5, index, int, radius, radius, tireTrackSystemId)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "10"
+  },
+  "createDensityMapSyncer": {
+   "sig": "createDensityMapSyncer(string, terrainRootNode)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "addDensityMapSyncerDensityMap": {
+   "sig": "addDensityMapSyncerDensityMap(syncerId, densityMapId, defaultCellSize, maxSyncDistance, deprioritizationDistance, usedByTerrainVT)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "6"
+  },
+  "onDensityMapSyncerDensityMapsAdded": {
+   "sig": "onDensityMapSyncerDensityMapsAdded(syncerId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "addDensityMapSyncerConnection": {
+   "sig": "addDensityMapSyncerConnection(syncerId, streamId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "removeDensityMapSyncerConnection": {
+   "sig": "removeDensityMapSyncerConnection(syncerId, streamId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "writeDensityMapSyncerServerUpdateToStream": {
+   "sig": "writeDensityMapSyncerServerUpdateToStream(syncerId, streamId, streamId, x, y, z, viewCoeff, maxPacketSize, lastSeqSent)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "9"
+  },
+  "readDensityMapSyncerServerUpdateFromStream": {
+   "sig": "readDensityMapSyncerServerUpdateFromStream(syncerId, streamId, g_clientInterpDelay, g_packetPhysicsNetworkTime, tickDuration)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "setDensityMapSyncerLostPacket": {
+   "sig": "setDensityMapSyncerLostPacket(syncerId, streamId, packetId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "getInfoLayerFromTerrain": {
+   "sig": "getInfoLayerFromTerrain(terrainNode, layerName)",
+   "source": "observed",
+   "calls": 17,
+   "arity": "2"
+  },
+  "getBitVectorMapNumChannels": {
+   "sig": "getBitVectorMapNumChannels(infoLayer)",
+   "source": "observed",
+   "calls": 11,
+   "arity": "1"
+  },
+  "writeBitVectorMapToStream": {
+   "sig": "writeBitVectorMapToStream(bitVector, streamId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "readBitVectorMapFromStream": {
+   "sig": "readBitVectorMapFromStream(bitVector, streamId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "getBitVectorMapParallelogram": {
+   "sig": "getBitVectorMapParallelogram(bitVector, x, y, x, y, x, y, firstChannel, arg9, roundingMode)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "10"
+  },
+  "getFoliageViewDistanceCoeff": {
+   "sig": "getFoliageViewDistanceCoeff()",
+   "source": "observed",
+   "calls": 4,
+   "arity": "0"
+  },
+  "createFoliageBendingSystem": {
+   "sig": "createFoliageBendingSystem(maxNumObjects, int)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "createMaterialTextureFromFile": {
+   "sig": "createMaterialTextureFromFile(arg1, bool, bool)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "3"
+  },
+  "reloadResource": {
+   "sig": "reloadResource(textureFilename)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getLightColor": {
+   "sig": "getLightColor(node)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "1"
+  },
+  "getShapeCastShadowmap": {
+   "sig": "getShapeCastShadowmap(id)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "getShapeReceiveShadowmap": {
+   "sig": "getShapeReceiveShadowmap(id)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setReflectionMapObjectMasks": {
+   "sig": "setReflectionMapObjectMasks(id, arg2, arg3, bool)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "4"
+  },
+  "getToneMappingCurveSlope": {
+   "sig": "getToneMappingCurveSlope()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "getToneMappingCurveToe": {
+   "sig": "getToneMappingCurveToe()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "getToneMappingCurveShoulder": {
+   "sig": "getToneMappingCurveShoulder()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "getToneMappingCurveBlackClip": {
+   "sig": "getToneMappingCurveBlackClip()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "getToneMappingCurveWhiteClip": {
+   "sig": "getToneMappingCurveWhiteClip()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "setSharedShaderParameter": {
+   "sig": "setSharedShaderParameter(int, float)",
+   "source": "observed",
+   "calls": 42,
+   "arity": "2"
+  },
+  "renderEnvProbe": {
+   "sig": "renderEnvProbe(arg1, arg2, arg3, bool, arg5, arg6)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "6"
+  },
+  "setLightColor": {
+   "sig": "setLightColor(sunLightId, defaultColor, defaultColor, defaultColor)",
+   "source": "observed",
+   "calls": 13,
+   "arity": "4"
+  },
+  "setExposureRange": {
+   "sig": "setExposureRange(middleGrayValue?, eRmin?, eRmax?)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "0..3"
+  },
+  "getExposureRange": {
+   "sig": "getExposureRange()",
+   "source": "observed",
+   "calls": 3,
+   "arity": "0"
+  },
+  "resetAutoExposure": {
+   "sig": "resetAutoExposure()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "setFixedLuminanceForExposure": {
+   "sig": "setFixedLuminanceForExposure(int)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "1"
+  },
+  "setEnvironmentSettings": {
+   "sig": "setEnvironmentSettings(minuteOfDay, dayOfYear, weatherMask, viewerSpatialityMask)",
+   "source": "observed",
+   "calls": 7,
+   "arity": "4"
+  },
+  "textureFileExists": {
+   "sig": "textureFileExists(wrapDiffuse)",
+   "source": "observed",
+   "calls": 13,
+   "arity": "1"
+  },
+  "setBloomMagnitude": {
+   "sig": "setBloomMagnitude(bloomMagnitude)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setBloomMaskThreshold": {
+   "sig": "setBloomMaskThreshold(bloomThreshold)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setToneMappingCurveSlope": {
+   "sig": "setToneMappingCurveSlope(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setToneMappingCurveToe": {
+   "sig": "setToneMappingCurveToe(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setToneMappingCurveShoulder": {
+   "sig": "setToneMappingCurveShoulder(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setToneMappingCurveBlackClip": {
+   "sig": "setToneMappingCurveBlackClip(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setToneMappingCurveWhiteClip": {
+   "sig": "setToneMappingCurveWhiteClip(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setColorGradingSettings": {
+   "sig": "setColorGradingSettings(colorGrading, colorGrading, int)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "3"
+  },
+  "setFoliageShaderParameter": {
+   "sig": "setFoliageShaderParameter(terrainDataPlaneId, string, arg3, arg4, int, int)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "6"
+  },
+  "setEnvMap": {
+   "sig": "setEnvMap(arg1?, arg2?, arg3?, arg4?, int?, int?, int?, int?, force?, bool?)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "0..10"
+  },
+  "setEnvAlbedoGroundColor": {
+   "sig": "setEnvAlbedoGroundColor(arg1, arg2, arg3)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "3"
+  },
+  "setAtmosphereSecondaryLightSource": {
+   "sig": "setAtmosphereSecondaryLightSource(arg1, arg2, arg3, arg4, arg5, arg6)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "6"
+  },
+  "setAtmosphereCornetteShankAsymmetryFactor": {
+   "sig": "setAtmosphereCornetteShankAsymmetryFactor(asymmetryFactor)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setSunSizeScale": {
+   "sig": "setSunSizeScale(sunSizeScale)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setMoonSizeScale": {
+   "sig": "setMoonSizeScale(moonSizeScale)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setSunIsPrimary": {
+   "sig": "setSunIsPrimary(sunIsPrimary)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setSunBrightnessScale": {
+   "sig": "setSunBrightnessScale(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setCloudShadowsTransmittanceBoost": {
+   "sig": "setCloudShadowsTransmittanceBoost(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setCloudGroundAlbedo": {
+   "sig": "setCloudGroundAlbedo(cloudGroundAlbedo, cloudGroundAlbedo, cloudGroundAlbedo)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "3"
+  },
+  "saveDensityMapHeightUpdaterStateToFile": {
+   "sig": "saveDensityMapHeightUpdaterStateToFile(updater, xml)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setDensityMapHeightUpdateType": {
+   "sig": "setDensityMapHeightUpdateType(updater, snowHeightTypeIndex)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setDensityMapHeightUpdateApplyMaxTimePerFrame": {
+   "sig": "setDensityMapHeightUpdateApplyMaxTimePerFrame(updater, arg2)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "setDensityMapHeightUpdateApplyBlockMask": {
+   "sig": "setDensityMapHeightUpdateApplyBlockMask(updater, arg2, arg3, arg4)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "loadDensityMapHeightUpdaterStateFromFile": {
+   "sig": "loadDensityMapHeightUpdaterStateFromFile(updater, xml)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setDensityMapHeightUpdateApplyFinishedCallback": {
+   "sig": "setDensityMapHeightUpdateApplyFinishedCallback(updater, string, arg3)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "applyDensityMapHeightUpdate": {
+   "sig": "applyDensityMapHeightUpdate(updater, snowHeightTypeIndex, delta, arg4, bool, bool, arg7, arg8, arg9, string, arg11, getMaxUpdateTime, tireTrackSystemId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "13"
+  },
+  "setGlobalCloudCoverage": {
+   "sig": "setGlobalCloudCoverage(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "11"
+  },
+  "setCloudCurlNoiseProperties": {
+   "sig": "setCloudCurlNoiseProperties(arg1, arg2, arg3)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "setCirrusCloudCoverage": {
+   "sig": "setCirrusCloudCoverage(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setCloudType": {
+   "sig": "setCloudType(type, type, alpha, arg4, arg5, arg6)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "6"
+  },
+  "setCloudPrecipitation": {
+   "sig": "setCloudPrecipitation(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setCloudDensityScaling": {
+   "sig": "setCloudDensityScaling(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setCloudWind": {
+   "sig": "setCloudWind(arg1, arg2, arg3, arg4, arg5, arg6)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "6"
+  },
+  "setGroundFogWind": {
+   "sig": "setGroundFogWind(int, int, int)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "setGroundFogVolumeNoiseWind": {
+   "sig": "setGroundFogVolumeNoiseWind(int, int, int, int)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "setGroundFogGlobalCoverage": {
+   "sig": "setGroundFogGlobalCoverage(arg1, arg2)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "setGroundFogHeight": {
+   "sig": "setGroundFogHeight(groundFogExtraHeight)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setGroundFogGroundLevelDensity": {
+   "sig": "setGroundFogGroundLevelDensity(groundFogGroundLevelDensity)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setGroundFogMinimumValleyDepth": {
+   "sig": "setGroundFogMinimumValleyDepth(groundFogMinValleyDepth)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setHeightFogGroundLevelDensity": {
+   "sig": "setHeightFogGroundLevelDensity(heightFogGroundLevelDensity)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setHeightFogMaxHeight": {
+   "sig": "setHeightFogMaxHeight(heightFogMaxHeight)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setCullOverride": {
+   "sig": "setCullOverride(i3dNode, bool)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "getAtmosphereQuality": {
+   "sig": "getAtmosphereQuality()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setTerrainDisplacementWetness": {
+   "sig": "setTerrainDisplacementWetness(g_terrainNode, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "filterText": {
+   "sig": "filterText(arg1, bool, bool)",
+   "source": "observed",
+   "calls": 10,
+   "arity": "3"
+  },
+  "createStream": {
+   "sig": "createStream()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "writeSplitShapesToStream": {
+   "sig": "writeSplitShapesToStream(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setSplitShapesFileIdMapping": {
+   "sig": "setSplitShapesFileIdMapping(arg1, arg2)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "2"
+  },
+  "readSplitShapesFromStream": {
+   "sig": "readSplitShapesFromStream(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getNumOfBlockedUsers": {
+   "sig": "getNumOfBlockedUsers()",
+   "source": "observed",
+   "calls": 6,
+   "arity": "0"
+  },
+  "getBlockedUser": {
+   "sig": "getBlockedUser(arg1)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "setIsUserBlocked": {
+   "sig": "setIsUserBlocked(uniqueUserId, platformUserId, platformId, bool, string)",
+   "source": "observed",
+   "calls": 6,
+   "arity": "5"
+  },
+  "readSplitShapesServerEventFromStream": {
+   "sig": "readSplitShapesServerEventFromStream(streamId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "writeSplitShapesServerEventToStream": {
+   "sig": "writeSplitShapesServerEventToStream(streamId, streamId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "saveGetMaxNumOfSaveGames": {
+   "sig": "saveGetMaxNumOfSaveGames()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "getLanguage": {
+   "sig": "getLanguage()",
+   "source": "observed",
+   "calls": 5,
+   "arity": "0"
+  },
+  "resetMultiplayerChecks": {
+   "sig": "resetMultiplayerChecks()",
+   "source": "observed",
+   "calls": 3,
+   "arity": "0"
+  },
+  "syncProfileFiles": {
+   "sig": "syncProfileFiles()",
+   "source": "observed",
+   "calls": 4,
+   "arity": "0"
+  },
+  "areStatsAvailable": {
+   "sig": "areStatsAvailable()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "statsGetIndex": {
+   "sig": "statsGetIndex(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "statsGet": {
+   "sig": "statsGet(id)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "statsSet": {
+   "sig": "statsSet(id, value)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "getTimeSec": {
+   "sig": "getTimeSec()",
+   "source": "observed",
+   "calls": 50,
+   "arity": "0"
+  },
+  "getDensityMapFilename": {
+   "sig": "getDensityMapFilename(arg1)",
+   "source": "observed",
+   "calls": 9,
+   "arity": "1"
+  },
+  "getFiles": {
+   "sig": "getFiles(directoryPath, string, arg3)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "3"
+  },
+  "setTerrainFillPlanesToMaterial": {
+   "sig": "setTerrainFillPlanesToMaterial(terrainRootNodeId, arg2, diffuse, normal, height)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "setTerrainFillPlanesToMaterialCustom": {
+   "sig": "setTerrainFillPlanesToMaterialCustom(terrainRootNodeId, arg2, diffuse, normal, height)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "getPhysicsRopeLength": {
+   "sig": "getPhysicsRopeLength(physicsRopeIndex)",
+   "source": "observed",
+   "calls": 8,
+   "arity": "1"
+  },
+  "setPhysicsRopeMaxLength": {
+   "sig": "setPhysicsRopeMaxLength(physicsRopeIndex, arg2)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "2"
+  },
+  "setPhysicsRopeAnchor": {
+   "sig": "setPhysicsRopeAnchor(physicsRopeIndex, int, arg3, arg4, arg5, arg6, bool)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "7"
+  },
+  "addPhysicsRope": {
+   "sig": "addPhysicsRope(nodes, nodeDistance, linkLength, massPerLength, collisionGroup, collisionMask, targetActor, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "15"
+  },
+  "removePhysicsRope": {
+   "sig": "removePhysicsRope(physicsRopeIndex)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "readSplitShapeIdFromStream": {
+   "sig": "readSplitShapeIdFromStream(streamId)",
+   "source": "observed",
+   "calls": 12,
+   "arity": "1"
+  },
+  "writeSplitShapeIdToStream": {
+   "sig": "writeSplitShapeIdToStream(streamId, splitShapeId)",
+   "source": "observed",
+   "calls": 12,
+   "arity": "2"
+  },
+  "getSaveableSplitShapeId": {
+   "sig": "getSaveableSplitShapeId(treeId)",
+   "source": "observed",
+   "calls": 9,
+   "arity": "1"
+  },
+  "getShapeFromSaveableSplitShapeId": {
+   "sig": "getShapeFromSaveableSplitShapeId(splitShapePart1, splitShapePart2, splitShapePart3)",
+   "source": "observed",
+   "calls": 9,
+   "arity": "3"
+  },
+  "setMaterialCustomMap": {
+   "sig": "setMaterialCustomMap(arg1, arg2, arg3, bool)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "4"
+  },
+  "getFoliageGraphicsCellSize": {
+   "sig": "getFoliageGraphicsCellSize(terrainDataPlaneId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "openWebFile": {
+   "sig": "openWebFile(urlBuyNow, string)",
+   "source": "observed",
+   "calls": 9,
+   "arity": "2"
+  },
+  "voiceChatCleanup": {
+   "sig": "voiceChatCleanup()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "destroyLowResCollisionHandler": {
+   "sig": "destroyLowResCollisionHandler()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "voiceChatAddLocalUser": {
+   "sig": "voiceChatAddLocalUser(getIsServer)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getIsUserBlocked": {
+   "sig": "getIsUserBlocked(uniqueUserId, platformUserId, platformId)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "3"
+  },
+  "voiceChatAddConnection": {
+   "sig": "voiceChatAddConnection(streamId, uniqueUserId, platformUserId, platformId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "getViewDistanceCoeff": {
+   "sig": "getViewDistanceCoeff()",
+   "source": "observed",
+   "calls": 5,
+   "arity": "0"
+  },
+  "addSplitShapeConnection": {
+   "sig": "addSplitShapeConnection(streamId, getPlatformId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "addTerrainUpdateConnection": {
+   "sig": "addTerrainUpdateConnection(g_terrainNode, streamId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "removeSplitShapeConnection": {
+   "sig": "removeSplitShapeConnection(streamId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "removeTerrainUpdateConnection": {
+   "sig": "removeTerrainUpdateConnection(g_terrainNode, streamId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "prepareSplitShapesServerWriteUpdateStream": {
+   "sig": "prepareSplitShapesServerWriteUpdateStream(dt)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "startWriteSplitShapesServerEvents": {
+   "sig": "startWriteSplitShapesServerEvents()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "finishWriteSplitShapesServerEvents": {
+   "sig": "finishWriteSplitShapesServerEvents()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "writeSplitShapesServerUpdateToStream": {
+   "sig": "writeSplitShapesServerUpdateToStream(streamId, streamId, arg3, arg4, arg5, arg6, arg7)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "7"
+  },
+  "voiceChatWriteServerUpdateToStream": {
+   "sig": "voiceChatWriteServerUpdateToStream(streamId, streamId, lastSeqSent)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "readSplitShapesServerUpdateFromStream": {
+   "sig": "readSplitShapesServerUpdateFromStream(streamId, g_clientInterpDelay, g_packetPhysicsNetworkTime, tickDuration)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "voiceChatReadServerUpdateFromStream": {
+   "sig": "voiceChatReadServerUpdateFromStream(streamId, g_clientInterpDelay, lastSeqSent)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "voiceChatNotifyPacketSent": {
+   "sig": "voiceChatNotifyPacketSent(packetId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "voiceChatNotifyPacketLost": {
+   "sig": "voiceChatNotifyPacketLost(packetId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setPedestrianSystemTrafficSystem": {
+   "sig": "setPedestrianSystemTrafficSystem(pedestrianSystemId, trafficSystemId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setTrafficSystemVehicleNavigationMap": {
+   "sig": "setTrafficSystemVehicleNavigationMap(trafficSystemId, navigationMap)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setVehicleNavigationMapTrafficSystem": {
+   "sig": "setVehicleNavigationMapTrafficSystem(navigationMap, trafficSystemId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "createLowResCollisionHandler": {
+   "sig": "createLowResCollisionHandler(lowResCollisionHandlerGridSize, lowResCollisionHandlerGridSize, int, int, lowResCollisionHandlerCellRaysPerFrame, int, int)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "7"
+  },
+  "addLowResCollisionHandlerLOD": {
+   "sig": "addLowResCollisionHandlerLOD(int, lowResCollisionHandlerCellRaysPerFrame)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "setLowResCollisionHandlerTerrainRootNode": {
+   "sig": "setLowResCollisionHandlerTerrainRootNode(terrainNode)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setSplitShapesWorldCompressionParams": {
+   "sig": "setSplitShapesWorldCompressionParams(terrainSize, terrainSize, float, int, int, float, terrainSize, terrainSize, float)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "9"
+  },
+  "getTerrainLodBlendDynamicDistances": {
+   "sig": "getTerrainLodBlendDynamicDistances(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setTerrainLodBlendDynamicDistances": {
+   "sig": "setTerrainLodBlendDynamicDistances(arg1, arg2, arg3)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "3"
+  },
+  "setGroundFogTerrainEntityId": {
+   "sig": "setGroundFogTerrainEntityId(terrainNode)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getIsSplitShapeConnectionWithinLimits": {
+   "sig": "getIsSplitShapeConnectionWithinLimits(platformId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getPlatformIdsAreCompatible": {
+   "sig": "getPlatformIdsAreCompatible(getPlatformId, getPlatformId)",
+   "source": "observed",
+   "calls": 7,
+   "arity": "2"
+  },
+  "saveGetInfoById": {
+   "sig": "saveGetInfoById(savegameIndex)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "resetSplitShapes": {
+   "sig": "resetSplitShapes()",
+   "source": "observed",
+   "calls": 3,
+   "arity": "0"
+  },
+  "setUseKinematicSplitShapes": {
+   "sig": "setUseKinematicSplitShapes(getIsServer)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "loadSplitShapesFromFile": {
+   "sig": "loadSplitShapesFromFile(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getModIdByFilename": {
+   "sig": "getModIdByFilename(modName)",
+   "source": "observed",
+   "calls": 6,
+   "arity": "1"
+  },
+  "getModMetaAttributeString": {
+   "sig": "getModMetaAttributeString(modId, priceString)",
+   "source": "observed",
+   "calls": 16,
+   "arity": "2"
+  },
+  "getSystemLanguage": {
+   "sig": "getSystemLanguage()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "getIsInCameraFrustum": {
+   "sig": "getIsInCameraFrustum(node, cameraNode, g_presentedScreenAspectRatio)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "3"
+  },
+  "setApplyCropsGrowthFinishedCallback": {
+   "sig": "setApplyCropsGrowthFinishedCallback(updater, string, arg3)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "setApplyCropsGrowthMaxTimePerFrame": {
+   "sig": "setApplyCropsGrowthMaxTimePerFrame(updater, getMaxUpdateTime)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "setDensityMapUpdaterApplyFinishedCallback": {
+   "sig": "setDensityMapUpdaterApplyFinishedCallback(arg1, string, arg3)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "3"
+  },
+  "setDensityMapUpdaterApplyMaxTimePerFrame": {
+   "sig": "setDensityMapUpdaterApplyMaxTimePerFrame(weedUpdater, getMaxUpdateTime)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "2"
+  },
+  "saveCropsGrowthStateToFile": {
+   "sig": "saveCropsGrowthStateToFile(updater, xml)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "saveDensityMapUpdaterStateToFile": {
+   "sig": "saveDensityMapUpdaterStateToFile(arg1, xml)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "createDensityMapUpdater": {
+   "sig": "createDensityMapUpdater(name, arg2, arg3, arg4, arg5, arg6, int, int, int, int, int)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "11"
+  },
+  "setDensityMapUpdaterMask": {
+   "sig": "setDensityMapUpdaterMask(weedUpdater, map, firstChannel, numChannels)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "4"
+  },
+  "loadCropsGrowthStateFromFile": {
+   "sig": "loadCropsGrowthStateFromFile(updater, xml)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "loadDensityMapUpdaterStateFromFile": {
+   "sig": "loadDensityMapUpdaterStateFromFile(arg1, xml)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "setCropsGrowthNextState": {
+   "sig": "setCropsGrowthNextState(updater, arg2, cutState, firstRegrowthState)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "4"
+  },
+  "setDensityMapUpdaterNextValue": {
+   "sig": "setDensityMapUpdaterNextValue(arg1, int, from, to)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "4"
+  },
+  "applyCropsGrowth": {
+   "sig": "applyCropsGrowth(updater, string, arg3, getMaxUpdateTime)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "applyDensityMapUpdater": {
+   "sig": "applyDensityMapUpdater(arg1, string, arg3, getMaxUpdateTime)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "4"
+  },
+  "setCropsGrowthMask": {
+   "sig": "setCropsGrowthMask(updater, map, firstChannel, numChannels)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "setCropsEnableGrowth": {
+   "sig": "setCropsEnableGrowth(updater, isEnabled)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setDensityMapUpdaterEnabled": {
+   "sig": "setDensityMapUpdaterEnabled(weedUpdater, isEnabled)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "createWebImageOverlay": {
+   "sig": "createWebImageOverlay(filename, previewFilename)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "createOverlayTextureFromFile": {
+   "sig": "createOverlayTextureFromFile(maskFilename)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "1"
+  },
+  "setDensityMapVisualizationOverlayTypeColor": {
+   "sig": "setDensityMapVisualizationOverlayTypeColor(foliageStateOverlay, arg2, arg3, arg4, arg5)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "setDensityMapVisualizationOverlayGrowthStateColor": {
+   "sig": "setDensityMapVisualizationOverlayGrowthStateColor(foliageStateOverlay, arg2, witheredState, arg4, arg5, arg6)",
+   "source": "observed",
+   "calls": 7,
+   "arity": "6"
+  },
+  "setDensityMapVisualizationOverlayStateColor": {
+   "sig": "setDensityMapVisualizationOverlayStateColor(overlay, bitVectorMapNOffset, bitVectorMap, int, firstChannel, numChannels, value, unpack, int?, int?)",
+   "source": "observed",
+   "calls": 33,
+   "arity": "8..10"
+  },
+  "resetDensityMapVisualizationOverlay": {
+   "sig": "resetDensityMapVisualizationOverlay(overlay)",
+   "source": "observed",
+   "calls": 13,
+   "arity": "1"
+  },
+  "generateDensityMapVisualizationOverlay": {
+   "sig": "generateDensityMapVisualizationOverlay(arg1)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "1"
+  },
+  "getIsDensityMapVisualizationOverlayReady": {
+   "sig": "getIsDensityMapVisualizationOverlayReady(arg1)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "1"
+  },
+  "saveHardwareScalability": {
+   "sig": "saveHardwareScalability()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getSupportsFidelityFxSRQuality": {
+   "sig": "getSupportsFidelityFxSRQuality(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "getSupportsFidelityFxSR30Quality": {
+   "sig": "getSupportsFidelityFxSR30Quality(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getFidelityFxSuperResolutionVersion": {
+   "sig": "getFidelityFxSuperResolutionVersion()",
+   "source": "observed",
+   "calls": 5,
+   "arity": "0"
+  },
+  "getSupportsDLSSQuality": {
+   "sig": "getSupportsDLSSQuality(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getSupportsXeSSQuality": {
+   "sig": "getSupportsXeSSQuality(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getSupportsPostProcessAntiAliasing": {
+   "sig": "getSupportsPostProcessAntiAliasing(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "getNumOfScreenModes": {
+   "sig": "getNumOfScreenModes()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getScreenModeInfo": {
+   "sig": "getScreenModeInfo(getScreenMode)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "1"
+  },
+  "getPerformanceClass": {
+   "sig": "getPerformanceClass()",
+   "source": "observed",
+   "calls": 3,
+   "arity": "0"
+  },
+  "getAutoPerformanceClass": {
+   "sig": "getAutoPerformanceClass()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setPerformanceClass": {
+   "sig": "setPerformanceClass(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getFidelityFxSR30FrameInterpolation": {
+   "sig": "getFidelityFxSR30FrameInterpolation()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setFidelityFxSR30FrameInterpolation": {
+   "sig": "setFidelityFxSR30FrameInterpolation(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getXeSSFrameInterpolation": {
+   "sig": "getXeSSFrameInterpolation()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setXeSSFrameInterpolation": {
+   "sig": "setXeSSFrameInterpolation(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getDLSSFrameInterpolation": {
+   "sig": "getDLSSFrameInterpolation()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setDLSSFrameInterpolation": {
+   "sig": "setDLSSFrameInterpolation(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getDRSTargetFPS": {
+   "sig": "getDRSTargetFPS()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "setDRSTargetFPS": {
+   "sig": "setDRSTargetFPS(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getSharpness": {
+   "sig": "getSharpness()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setSharpness": {
+   "sig": "setSharpness(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getShadingRateQuality": {
+   "sig": "getShadingRateQuality()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getSSAOQuality": {
+   "sig": "getSSAOQuality()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setSSAOQuality": {
+   "sig": "setSSAOQuality(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getCloudShadowsQuality": {
+   "sig": "getCloudShadowsQuality()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setCloudShadowsQuality": {
+   "sig": "setCloudShadowsQuality(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getTextureResolution": {
+   "sig": "getTextureResolution()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setTextureResolution": {
+   "sig": "setTextureResolution(getTextureResolutionByIndex)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getShadowQuality": {
+   "sig": "getShadowQuality()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getHasShadowFocusBox": {
+   "sig": "getHasShadowFocusBox()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setShadowQuality": {
+   "sig": "setShadowQuality(getShadowQualityByIndex, getHasShadowFocusBoxByIndex)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "getShadowDistanceQuality": {
+   "sig": "getShadowDistanceQuality()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getShadowFilterQuality": {
+   "sig": "getShadowFilterQuality()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getShaderQuality": {
+   "sig": "getShaderQuality()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setShaderQuality": {
+   "sig": "setShaderQuality(getShaderQualityByIndex)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getShadowMapFilterSize": {
+   "sig": "getShadowMapFilterSize()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setShadowMapFilterSize": {
+   "sig": "setShadowMapFilterSize(getShadowMapFilterByIndex)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getMaxNumShadowLights": {
+   "sig": "getMaxNumShadowLights()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setMaxNumShadowLights": {
+   "sig": "setMaxNumShadowLights(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getTerrainQuality": {
+   "sig": "getTerrainQuality()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setTerrainQuality": {
+   "sig": "setTerrainQuality(getTerrainQualityByIndex)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setViewDistanceCoeff": {
+   "sig": "setViewDistanceCoeff(int)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "1"
+  },
+  "setFoliageViewDistanceCoeff": {
+   "sig": "setFoliageViewDistanceCoeff(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "getAllowFoliageShadows": {
+   "sig": "getAllowFoliageShadows()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "setAllowFoliageShadows": {
+   "sig": "setAllowFoliageShadows(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getLODDistanceCoeff": {
+   "sig": "getLODDistanceCoeff()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "setLODDistanceCoeff": {
+   "sig": "setLODDistanceCoeff(int)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "1"
+  },
+  "getTerrainLODDistanceCoeff": {
+   "sig": "getTerrainLODDistanceCoeff()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setTerrainLODDistanceCoeff": {
+   "sig": "setTerrainLODDistanceCoeff(int)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "1"
+  },
+  "getFoliageLODDistanceCoeff": {
+   "sig": "getFoliageLODDistanceCoeff()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setFoliageLODDistanceCoeff": {
+   "sig": "setFoliageLODDistanceCoeff(percentValues)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getTyreTracksSegmentsCoeff": {
+   "sig": "getTyreTracksSegmentsCoeff()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "setTyreTracksSegmentsCoeff": {
+   "sig": "setTyreTracksSegmentsCoeff(tireTracksValues)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getVolumeMeshTessellationCoeff": {
+   "sig": "getVolumeMeshTessellationCoeff()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "setVolumeMeshTessellationCoeff": {
+   "sig": "setVolumeMeshTessellationCoeff(coeff)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "flushPhysicsCaches": {
+   "sig": "flushPhysicsCaches()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getModMetaAttributeInt": {
+   "sig": "getModMetaAttributeInt(modId, string)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "2"
+  },
+  "saveGetHasSpaceForSaveGame": {
+   "sig": "saveGetHasSpaceForSaveGame(savegameIndex, MaxSavegameSize)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "saveStartMigrateToPlayfab": {
+   "sig": "saveStartMigrateToPlayfab(string, nil)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "saveReadSavegameFinish": {
+   "sig": "saveReadSavegameFinish(string, ConnectToMasterServerScreen)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "2"
+  },
+  "netGetBandwidthEstimate": {
+   "sig": "netGetBandwidthEstimate()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "netShutdown": {
+   "sig": "netShutdown(int, int)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "2"
+  },
+  "getAllowTextCommunication": {
+   "sig": "getAllowTextCommunication()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getTerrainNumOfOverlayLayers": {
+   "sig": "getTerrainNumOfOverlayLayers(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getTerrainOverlayLayerName": {
+   "sig": "getTerrainOverlayLayerName(arg1, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "getTerrainOverlayLayerXmlAttribute": {
+   "sig": "getTerrainOverlayLayerXmlAttribute(g_terrainNode, arg2, attributeName)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "setTerrainOverlayLayerXmlAttribute": {
+   "sig": "setTerrainOverlayLayerXmlAttribute(arg1, index, arg3, arg4)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "getPhysicsDebugDrawCollisionFilterGroup": {
+   "sig": "getPhysicsDebugDrawCollisionFilterGroup()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "getPhysicsDebugDrawNoDepthMode": {
+   "sig": "getPhysicsDebugDrawNoDepthMode()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "getPhysicsDebugDrawMode": {
+   "sig": "getPhysicsDebugDrawMode()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "setPhysicsDebugDrawEnabled": {
+   "sig": "setPhysicsDebugDrawEnabled(bool)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setPhysicsDebugDrawCollisionFilterGroup": {
+   "sig": "setPhysicsDebugDrawCollisionFilterGroup(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setPhysicsDebugDrawNoDepthMode": {
+   "sig": "setPhysicsDebugDrawNoDepthMode(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setPhysicsDebugDrawMode": {
+   "sig": "setPhysicsDebugDrawMode(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "createRenderOverlay": {
+   "sig": "createRenderOverlay(scene, arg2, arg3, arg4, arg5, useAlpha, shapesMask, lightMask, renderShadows, bloomQuality, enableDof, ssaoQuality, asyncShaderCompilation, atmosphereQuality)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "14"
+  },
+  "updateRenderOverlay": {
+   "sig": "updateRenderOverlay(overlay)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getTerrainLayerSubLayer": {
+   "sig": "getTerrainLayerSubLayer(terrainRootNode, layer, int)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "createTerrainLayerTexture": {
+   "sig": "createTerrainLayerTexture(g_terrainNode)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "imeGetCursorPos": {
+   "sig": "imeGetCursorPos()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "isVideoOverlayReadyToPlay": {
+   "sig": "isVideoOverlayReadyToPlay(overlay)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "playVideoOverlay": {
+   "sig": "playVideoOverlay(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "isVideoOverlayPlaying": {
+   "sig": "isVideoOverlayPlaying(overlay)",
+   "source": "observed",
+   "calls": 6,
+   "arity": "1"
+  },
+  "updateVideoOverlay": {
+   "sig": "updateVideoOverlay(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "getVideoOverlayCurrentTime": {
+   "sig": "getVideoOverlayCurrentTime(overlay)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "stopVideoOverlay": {
+   "sig": "stopVideoOverlay(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "createVideoOverlay": {
+   "sig": "createVideoOverlay(currentVideoIndex, isLooping, volume)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "3"
+  },
+  "voiceChatGetConnectionStatus": {
+   "sig": "voiceChatGetConnectionStatus(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "getSupportsFidelityFxFrameInterpolation": {
+   "sig": "getSupportsFidelityFxFrameInterpolation(FRAME_INTERPOLATION_2X)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "getSupportsXeSSFrameInterpolation": {
+   "sig": "getSupportsXeSSFrameInterpolation(FRAME_INTERPOLATION_2X)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "getSupportsDLSSFrameInterpolation": {
+   "sig": "getSupportsDLSSFrameInterpolation(FRAME_INTERPOLATION_2X)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "getIsDRSAvailable": {
+   "sig": "getIsDRSAvailable()",
+   "source": "observed",
+   "calls": 4,
+   "arity": "0"
+  },
+  "getFrameInterpolationModeName": {
+   "sig": "getFrameInterpolationModeName(FRAME_INTERPOLATION_OFF)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "openNativeHelpMenu": {
+   "sig": "openNativeHelpMenu()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getDeviceTypeFromPlatformId": {
+   "sig": "getDeviceTypeFromPlatformId(platformId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "flushWebCache": {
+   "sig": "flushWebCache()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "isGameFullyInstalled": {
+   "sig": "isGameFullyInstalled()",
+   "source": "observed",
+   "calls": 5,
+   "arity": "0"
+  },
+  "showGameInstallProgress": {
+   "sig": "showGameInstallProgress()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "modDownloadManagerUpdateSync": {
+   "sig": "modDownloadManagerUpdateSync(bool)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "notificationsLoaded": {
+   "sig": "notificationsLoaded()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getNumOfNotifications": {
+   "sig": "getNumOfNotifications()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "getNotification": {
+   "sig": "getNotification(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "modDownloadManagerLoaded": {
+   "sig": "modDownloadManagerLoaded()",
+   "source": "observed",
+   "calls": 6,
+   "arity": "0"
+  },
+  "haveModsChanged": {
+   "sig": "haveModsChanged()",
+   "source": "observed",
+   "calls": 6,
+   "arity": "0"
+  },
+  "getNumModCategories": {
+   "sig": "getNumModCategories()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getNumOfMods": {
+   "sig": "getNumOfMods(categoryId)",
+   "source": "observed",
+   "calls": 7,
+   "arity": "1"
+  },
+  "getModCategoryName": {
+   "sig": "getModCategoryName(categoryId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getModId": {
+   "sig": "getModId(categoryId, arg2)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "2"
+  },
+  "getModNumDependencies": {
+   "sig": "getModNumDependencies(modId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getModDependency": {
+   "sig": "getModDependency(modId, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "getModFreeSpaceKb": {
+   "sig": "getModFreeSpaceKb()",
+   "source": "observed",
+   "calls": 3,
+   "arity": "0"
+  },
+  "getModUsedSpaceKb": {
+   "sig": "getModUsedSpaceKb()",
+   "source": "observed",
+   "calls": 3,
+   "arity": "0"
+  },
+  "installMod": {
+   "sig": "installMod(modId)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "getModMetaAttributeBool": {
+   "sig": "getModMetaAttributeBool(modId, string)",
+   "source": "observed",
+   "calls": 15,
+   "arity": "2"
+  },
+  "updateMod": {
+   "sig": "updateMod(modId)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "uninstallMod": {
+   "sig": "uninstallMod(modId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setModHubRating": {
+   "sig": "setModHubRating(modId, value)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "getModHubRating": {
+   "sig": "getModHubRating(modId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setEnableBetaMods": {
+   "sig": "setEnableBetaMods(showAll)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setModDownloadManagerRecommenderParams": {
+   "sig": "setModDownloadManagerRecommenderParams(arg1, arg2, arg3, arg4, int)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "getModUseAvailability": {
+   "sig": "getModUseAvailability(bool)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "1"
+  },
+  "getNumOfBlockedMods": {
+   "sig": "getNumOfBlockedMods()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getBlockedMod": {
+   "sig": "getBlockedMod(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "extraUpdatePhysics": {
+   "sig": "extraUpdatePhysics(preSimulateSteps)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "saveReadSavegameStart": {
+   "sig": "saveReadSavegameStart(savegameIndex, string, arg3)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "setIs3DAudioRenderingEnabled": {
+   "sig": "setIs3DAudioRenderingEnabled(bool)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setIs3DGraphicsRenderingEnabled": {
+   "sig": "setIs3DGraphicsRenderingEnabled(bool)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "getLanguageName": {
+   "sig": "getLanguageName(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "getScreenMode": {
+   "sig": "getScreenMode()",
+   "source": "observed",
+   "calls": 4,
+   "arity": "0"
+  },
+  "addTimer": {
+   "sig": "addTimer(int, string, arg3)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "3"
+  },
+  "removeTimer": {
+   "sig": "removeTimer(timerId)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "1"
+  },
+  "setJointFrame": {
+   "sig": "setJointFrame(jointIndex, anchorActor, jointTransform)",
+   "source": "observed",
+   "calls": 21,
+   "arity": "3"
+  },
+  "getIsPhysicsUpdateIndexSimulated": {
+   "sig": "getIsPhysicsUpdateIndexSimulated(physicsIndex)",
+   "source": "observed",
+   "calls": 6,
+   "arity": "1"
+  },
+  "setCCTPairCollision": {
+   "sig": "setCCTPairCollision(controllerIndex, heldItemNode, bool)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "3"
+  },
+  "getPhysicsUpdateIndex": {
+   "sig": "getPhysicsUpdateIndex()",
+   "source": "observed",
+   "calls": 4,
+   "arity": "0"
+  },
+  "addJointBreakReport": {
+   "sig": "addJointBreakReport(arg1, string, mountable)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "3"
+  },
+  "removeJoint": {
+   "sig": "removeJoint(jointIndex)",
+   "source": "observed",
+   "calls": 26,
+   "arity": "1"
+  },
+  "getAnimalFromCollisionNode": {
+   "sig": "getAnimalFromCollisionNode(arg1)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "getMD5": {
+   "sig": "getMD5(tostring)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "1"
+  },
+  "getSharedI3DFilesData": {
+   "sig": "getSharedI3DFilesData(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "getIsOccluderMesh": {
+   "sig": "getIsOccluderMesh(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getIsTerrainDecal": {
+   "sig": "getIsTerrainDecal(node)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "1"
+  },
+  "getIsRenderedInViewports": {
+   "sig": "getIsRenderedInViewports(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getShapeDecalLayer": {
+   "sig": "getShapeDecalLayer(arg1)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "getReferenceInfo": {
+   "sig": "getReferenceInfo(arg1)",
+   "source": "observed",
+   "calls": 6,
+   "arity": "1"
+  },
+  "inAppGetProductPurchaseState": {
+   "sig": "inAppGetProductPurchaseState(productId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "inAppHasRestorePurchases": {
+   "sig": "inAppHasRestorePurchases()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "inAppRestorePurchases": {
+   "sig": "inAppRestorePurchases(string, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "copyFile": {
+   "sig": "copyFile(inputBindingPathTemplate, g_savegamePath, forceOverwrite)",
+   "source": "observed",
+   "calls": 10,
+   "arity": "3"
+  },
+  "getXMLRootName": {
+   "sig": "getXMLRootName(handle)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "createDensityMapVisualizationOverlay": {
+   "sig": "createDensityMapVisualizationOverlay(string, int, int)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "3"
+  },
+  "createFile": {
+   "sig": "createFile(filename, WRITE)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "2"
+  },
+  "folderExists": {
+   "sig": "folderExists(arg1)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "saveSetFixedSavegame": {
+   "sig": "saveSetFixedSavegame(path)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "netGetTime": {
+   "sig": "netGetTime()",
+   "source": "observed",
+   "calls": 4,
+   "arity": "0"
+  },
+  "registerProfileFile": {
+   "sig": "registerProfileFile(string)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "addNotificationFilter": {
+   "sig": "addNotificationFilter(GS_PRODUCT_ID, g_gameVersionNotification)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "getModInstallPath": {
+   "sig": "getModInstallPath()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getModDownloadPath": {
+   "sig": "getModDownloadPath()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getTime": {
+   "sig": "getTime()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "addSplitShapesShaderParameterOverwrite": {
+   "sig": "addSplitShapesShaderParameterOverwrite(string, int, int, int, int)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "initModDownloadManager": {
+   "sig": "initModDownloadManager(g_modsDirectory, arg2, g_minModDescVersion, g_maxModDescVersion, g_isDevelopmentVersion)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "startUpdatePendingMods": {
+   "sig": "startUpdatePendingMods()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "isModUpdateRunning": {
+   "sig": "isModUpdateRunning()",
+   "source": "observed",
+   "calls": 3,
+   "arity": "0"
+  },
+  "getPhysicsDt": {
+   "sig": "getPhysicsDt()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getPhysicsDtUnclamped": {
+   "sig": "getPhysicsDtUnclamped()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getPhysicsDtNonInterpolated": {
+   "sig": "getPhysicsDtNonInterpolated()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getIsLanguageEnabled": {
+   "sig": "getIsLanguageEnabled(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "saveScreenshot": {
+   "sig": "saveScreenshot(lastNoteScreenshotFilepath)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "cancelAllStreamedI3DFiles": {
+   "sig": "cancelAllStreamedI3DFiles()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "setDoFBlurArea": {
+   "sig": "setDoFBlurArea(int, int, int, int)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "4"
+  },
+  "setDoFparams": {
+   "sig": "setDoFparams(arg1, arg2, arg3, arg4, arg5, arg6)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "6"
+  },
+  "setDofQuality": {
+   "sig": "setDofQuality(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "deleteFile": {
+   "sig": "deleteFile(arg1)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "1"
+  },
+  "getSplitShapeStats": {
+   "sig": "getSplitShapeStats(shape)",
+   "source": "observed",
+   "calls": 7,
+   "arity": "1"
+  },
+  "getNumOfSplitShapes": {
+   "sig": "getNumOfSplitShapes()",
+   "source": "observed",
+   "calls": 3,
+   "arity": "0"
+  },
+  "getFileIdHasSplitShapes": {
+   "sig": "getFileIdHasSplitShapes(arg1)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "1"
+  },
+  "splitShape": {
+   "sig": "splitShape(shape, x, offset, z, nx, ny, nz, yx, yy, yz, cutSizeY, cutSizeZ, string, woodCrusher)",
+   "source": "observed",
+   "calls": 10,
+   "arity": "14"
+  },
+  "removeSplitShapeAttachments": {
+   "sig": "removeSplitShapeAttachments(attachedSplitShape, arg2, offset, arg4, int, int, int, int, int, int, delimbSizeX, delimbSizeY, delimbSizeZ)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "13"
+  },
+  "getSplitShapeOrientedBoundingBox": {
+   "sig": "getSplitShapeOrientedBoundingBox(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "resolveStreamSplitShapeId": {
+   "sig": "resolveStreamSplitShapeId(splitShapeId1, splitShapeId2)",
+   "source": "observed",
+   "calls": 6,
+   "arity": "2"
+  },
+  "isAbsolutePath": {
+   "sig": "isAbsolutePath(arg1)",
+   "source": "observed",
+   "calls": 10,
+   "arity": "1"
+  },
+  "getFileMD5": {
+   "sig": "getFileMD5(filename, arg2)",
+   "source": "observed",
+   "calls": 6,
+   "arity": "2"
+  },
+  "setModInstalled": {
+   "sig": "setModInstalled(absBaseFilename, addDLCPrefix)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "netSendStream": {
+   "sig": "netSendStream(serverStreamId, string, string, CHANNEL_MAIN, bool)",
+   "source": "observed",
+   "calls": 17,
+   "arity": "5"
+  },
+  "voiceChatWriteClientUpdateToStream": {
+   "sig": "voiceChatWriteClientUpdateToStream(serverStreamId, serverStreamId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "netCloseConnection": {
+   "sig": "netCloseConnection(arg1, bool, int)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "3"
+  },
+  "netGetAndResetConnectionSendStats": {
+   "sig": "netGetAndResetConnectionSendStats(streamId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "netStartup": {
+   "sig": "netStartup(int, int, arg3, port, string, arg6)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "6"
+  },
+  "netSetMaximumIncomingConnections": {
+   "sig": "netSetMaximumIncomingConnections(int)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "netGetConnectionStats": {
+   "sig": "netGetConnectionStats(streamId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "voiceChatReadClientUpdateFromStream": {
+   "sig": "voiceChatReadClientUpdateFromStream(streamId, g_clientInterpDelay, streamId, lastSeqSent)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "getIsSleeping": {
+   "sig": "getIsSleeping(rootNode)",
+   "source": "observed",
+   "calls": 6,
+   "arity": "1"
+  },
+  "setJointRotationLimit": {
+   "sig": "setJointRotationLimit(jointIndex, axis, bool, int, int)",
+   "source": "observed",
+   "calls": 31,
+   "arity": "5"
+  },
+  "setJointTranslationLimit": {
+   "sig": "setJointTranslationLimit(jointIndex, axis, bool, int, int)",
+   "source": "observed",
+   "calls": 37,
+   "arity": "5"
+  },
+  "removeJointBreakReport": {
+   "sig": "removeJointBreakReport(dynamicMountJointIndex)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setPairCollision": {
+   "sig": "setPairCollision(node, nodeId, state)",
+   "source": "observed",
+   "calls": 17,
+   "arity": "3"
+  },
+  "removeWakeUpReport": {
+   "sig": "removeWakeUpReport(rootNode)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "1"
+  },
+  "addWakeUpReport": {
+   "sig": "addWakeUpReport(nodeId, string, arg3)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "3"
+  },
+  "createPedestrianSystem": {
+   "sig": "createPedestrianSystem(xmlFilename, transformId, arg3, arg4, ENVIRONMENT)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "addPedestrianSound": {
+   "sig": "addPedestrianSound(arg1, arg2, arg3, arg4, arg5, arg6)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "6"
+  },
+  "addPedestrianGroup": {
+   "sig": "addPedestrianGroup(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "8"
+  },
+  "assignSoundToPedestrianGroup": {
+   "sig": "assignSoundToPedestrianGroup(arg1, arg2, arg3)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "addPedestrianIdleAnimation": {
+   "sig": "addPedestrianIdleAnimation(arg1, arg2)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "addPedestrianWalkAnimation": {
+   "sig": "addPedestrianWalkAnimation(arg1, arg2, arg3, arg4, arg5, arg6, arg7)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "7"
+  },
+  "setPedestrianSystemUseOutdoorAudioSetup": {
+   "sig": "setPedestrianSystemUseOutdoorAudioSetup(pedestrianSystemId, getIsIndoor)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "addPedestrian": {
+   "sig": "addPedestrian(arg1, arg2, arg3, arg4, variationName, requiredFlags, preventFlags, timeFrom, timeTo)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "9"
+  },
+  "assignWalkAnimationToPedestrian": {
+   "sig": "assignWalkAnimationToPedestrian(arg1, arg2, walkAnimationId, idleAnimationId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "assignPedestrianToPedestrianGroup": {
+   "sig": "assignPedestrianToPedestrianGroup(arg1, arg2, arg3)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "assignIdleAnimationToPedestrian": {
+   "sig": "assignIdleAnimationToPedestrian(arg1, arg2, arg3)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "removePedestrian": {
+   "sig": "removePedestrian(pedestrianSystemId, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setPedestrianSystemEnabled": {
+   "sig": "setPedestrianSystemEnabled(pedestrianSystemId, state)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "setPedestrianSystemMask": {
+   "sig": "setPedestrianSystemMask(pedestrianSystemId, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setPedestrianSystemDaytime": {
+   "sig": "setPedestrianSystemDaytime(pedestrianSystemId, dayTime)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setIsTerrainDecal": {
+   "sig": "setIsTerrainDecal(arg1, bool)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "getShaderTimeSec": {
+   "sig": "getShaderTimeSec()",
+   "source": "observed",
+   "calls": 4,
+   "arity": "0"
+  },
+  "setSampleGroup": {
+   "sig": "setSampleGroup(soundSample, audioGroup)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "2"
+  },
+  "addReplacedCustomShader": {
+   "sig": "addReplacedCustomShader(filename, string)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "createFacialAnimPlayer": {
+   "sig": "createFacialAnimPlayer(string, skeletonRootNode, expressionFilename)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "setFacialAnimTime": {
+   "sig": "setFacialAnimTime(facialAnimationPlayer, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setFacialAnimSchedule": {
+   "sig": "setFacialAnimSchedule(arg1, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setFacialAnimLookAt": {
+   "sig": "setFacialAnimLookAt(facialAnimationPlayer, node)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "resetFacialAnim": {
+   "sig": "resetFacialAnim(facialAnimationPlayer)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getFacialAnimCurrentEmotions": {
+   "sig": "getFacialAnimCurrentEmotions(facialAnimationPlayer)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "isFacialAnimSilent": {
+   "sig": "isFacialAnimSilent(facialAnimationPlayer)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setFacialAnimLookAtWeight": {
+   "sig": "setFacialAnimLookAtWeight(facialAnimationPlayer, weight)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "addTrafficSystemPlayer": {
+   "sig": "addTrafficSystemPlayer(trafficSystemId, arg2)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "getCCTGroundObject": {
+   "sig": "getCCTGroundObject(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "setCCTPosition": {
+   "sig": "setCCTPosition(capsuleId, x, getBottomOffsetY, z)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "profilerGetCurrentGpuVRAM": {
+   "sig": "profilerGetCurrentGpuVRAM()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "profilerWriteGpuBenchmarkStats": {
+   "sig": "profilerWriteGpuBenchmarkStats(OUTPUT_FILENAME)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "profilerGetGpuPerformanceRating": {
+   "sig": "profilerGetGpuPerformanceRating(arg1)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "profilerStatsExportInit": {
+   "sig": "profilerStatsExportInit()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "profilerStatsExportAddMetadata": {
+   "sig": "profilerStatsExportAddMetadata(string, string)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "2"
+  },
+  "profilerStatsExportAddSampleBegin": {
+   "sig": "profilerStatsExportAddSampleBegin()",
+   "source": "observed",
+   "calls": 3,
+   "arity": "0"
+  },
+  "profilerStatsExportAddSampleData": {
+   "sig": "profilerStatsExportAddSampleData(string, string)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "profilerStatsExportAddSampleEnd": {
+   "sig": "profilerStatsExportAddSampleEnd()",
+   "source": "observed",
+   "calls": 3,
+   "arity": "0"
+  },
+  "profilerGpuBenchmarkSample": {
+   "sig": "profilerGpuBenchmarkSample()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "profilerStatsExportFinalize": {
+   "sig": "profilerStatsExportFinalize(OUTPUT_FILENAME)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setTimerTime": {
+   "sig": "setTimerTime(timerId, int)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "2"
+  },
+  "saveSetCloudErrorCallback": {
+   "sig": "saveSetCloudErrorCallback(string, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "saveGetUploadState": {
+   "sig": "saveGetUploadState(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "saveResetStorageDeviceSelection": {
+   "sig": "saveResetStorageDeviceSelection()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "saveUploadSavegameDebugInfo": {
+   "sig": "saveUploadSavegameDebugInfo(savegameId, uploadKey, string, arg4)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "downloadSavegame": {
+   "sig": "downloadSavegame(uploadKey, savegameIndex, savegameId, string, arg5)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "saveUpdateList": {
+   "sig": "saveUpdateList(string, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "saveCancelUpdateList": {
+   "sig": "saveCancelUpdateList()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "saveResolveConflict": {
+   "sig": "saveResolveConflict(savegameId, resolvePolicy, string, arg4)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "getDateAt": {
+   "sig": "getDateAt(string, arg2, arg3, arg4, arg5, int, int, arg8, arg9)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "9"
+  },
+  "deleteFolder": {
+   "sig": "deleteFolder(filename)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "savePreparedDensityMapToFile": {
+   "sig": "savePreparedDensityMapToFile(param, string, arg3)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "savePreparedTerrainLodTypeMap": {
+   "sig": "savePreparedTerrainLodTypeMap(param, string, arg3)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "savePreparedTerrainHeightMap": {
+   "sig": "savePreparedTerrainHeightMap(param, string, arg3)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "savePreparedSplitShapesToFile": {
+   "sig": "savePreparedSplitShapesToFile(string, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "savePreparedVehicleNavigationCostMapToFile": {
+   "sig": "savePreparedVehicleNavigationCostMapToFile(param, string, arg3)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "saveWriteSavegameFinish": {
+   "sig": "saveWriteSavegameFinish(savegameMetadata, savegameDisplayDesc, string, arg4)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "saveDensityMapToFile": {
+   "sig": "saveDensityMapToFile(arg1, arg2)",
+   "source": "observed",
+   "calls": 8,
+   "arity": "2"
+  },
+  "prepareSaveDensityMapToFile": {
+   "sig": "prepareSaveDensityMapToFile(arg1, arg2)",
+   "source": "observed",
+   "calls": 8,
+   "arity": "2"
+  },
+  "prepareSaveVehicleNavigationCostMapToFile": {
+   "sig": "prepareSaveVehicleNavigationCostMapToFile(arg1, arg2)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "saveSplitShapesToFile": {
+   "sig": "saveSplitShapesToFile(gmss)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "prepareSaveSplitShapesToFile": {
+   "sig": "prepareSaveSplitShapesToFile(gmss)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "saveTerrainLodTypeMap": {
+   "sig": "saveTerrainLodTypeMap(g_terrainNode, g_terrainNode)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "getTerrainLodTypeMapFilename": {
+   "sig": "getTerrainLodTypeMapFilename(g_terrainNode)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "prepareSaveTerrainLodTypeMap": {
+   "sig": "prepareSaveTerrainLodTypeMap(g_terrainNode, g_terrainNode)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "saveTerrainLodNormalMap": {
+   "sig": "saveTerrainLodNormalMap(g_terrainNode, g_terrainNode)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "getTerrainLodNormalMapFilename": {
+   "sig": "getTerrainLodNormalMapFilename(g_terrainNode)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "saveTerrainHeightMap": {
+   "sig": "saveTerrainHeightMap(g_terrainNode, g_terrainNode)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "getTerrainHeightMapFilename": {
+   "sig": "getTerrainHeightMapFilename(g_terrainNode)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "prepareSaveTerrainHeightMap": {
+   "sig": "prepareSaveTerrainHeightMap(g_terrainNode, g_terrainNode)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "saveTerrainOccludersCache": {
+   "sig": "saveTerrainOccludersCache(g_terrainNode, g_terrainNode)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "getTerrainOccludersCacheFilename": {
+   "sig": "getTerrainOccludersCacheFilename(g_terrainNode)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "saveDeleteSavegame": {
+   "sig": "saveDeleteSavegame(savegameIndex, string, arg3)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "saveWriteSavegameStart": {
+   "sig": "saveWriteSavegameStart(savegameIndex, displayName, MaxSavegameSize, string, arg5)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "saveGetNumOfSaveGames": {
+   "sig": "saveGetNumOfSaveGames()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "getTerrainDisplacementUploadInProgress": {
+   "sig": "getTerrainDisplacementUploadInProgress()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "fileWrite": {
+   "sig": "fileWrite(outputFile, height)",
+   "source": "observed",
+   "calls": 8,
+   "arity": "2"
+  },
+  "ambientSoundsAddSample": {
+   "sig": "ambientSoundsAddSample(soundPlayerId, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "13"
+  },
+  "ambientSoundsAddSampleVariation": {
+   "sig": "ambientSoundsAddSampleVariation(soundPlayerId, arg2, arg3, arg4)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "4"
+  },
+  "ambientSoundsSampleSetIndoorVolumeFactor": {
+   "sig": "ambientSoundsSampleSetIndoorVolumeFactor(soundPlayerId, arg2, arg3, arg4)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "4"
+  },
+  "ambientSoundsSampleSetFadeInOutTime": {
+   "sig": "ambientSoundsSampleSetFadeInOutTime(soundPlayerId, arg2, arg3, arg4, arg5)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "5"
+  },
+  "ambientSoundsSampleSetMinMaxVolume": {
+   "sig": "ambientSoundsSampleSetMinMaxVolume(soundPlayerId, arg2, arg3, arg4, arg5)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "5"
+  },
+  "ambientSoundsSampleSetMinMaxLoops": {
+   "sig": "ambientSoundsSampleSetMinMaxLoops(soundPlayerId, arg2, arg3, arg4, arg5)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "5"
+  },
+  "ambientSoundsSampleSetMinMaxPitch": {
+   "sig": "ambientSoundsSampleSetMinMaxPitch(soundPlayerId, arg2, arg3, arg4, arg5)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "5"
+  },
+  "ambientSoundsSampleSetMinMaxDelay": {
+   "sig": "ambientSoundsSampleSetMinMaxDelay(soundPlayerId, arg2, arg3, arg4, arg5)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "5"
+  },
+  "ambientSoundsSampleSetMinMaxLength": {
+   "sig": "ambientSoundsSampleSetMinMaxLength(soundPlayerId, arg2, arg3, arg4, arg5)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "5"
+  },
+  "ambientSoundsRemoveAllSamples": {
+   "sig": "ambientSoundsRemoveAllSamples(soundPlayerId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "ambientSoundsSetTimeAndDay": {
+   "sig": "ambientSoundsSetTimeAndDay(soundPlayerId, arg2, arg3)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "ambientSoundsUpdate": {
+   "sig": "ambientSoundsUpdate(soundPlayerId, dt, arg3)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "ambientSoundsSetEnabled": {
+   "sig": "ambientSoundsSetEnabled(soundPlayerId, isEnabled)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "ambientSoundsSetIsIndoor": {
+   "sig": "ambientSoundsSetIsIndoor(soundPlayerId, isIndoor)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "getLateReverbGainPreset": {
+   "sig": "getLateReverbGainPreset(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getReverbGainPreset": {
+   "sig": "getReverbGainPreset(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getReverbDecayPreset": {
+   "sig": "getReverbDecayPreset(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getReverbReflectionPreset": {
+   "sig": "getReverbReflectionPreset(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getReverbReferenceFrequenciesPreset": {
+   "sig": "getReverbReferenceFrequenciesPreset(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setReverbPreset": {
+   "sig": "setReverbPreset(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "12"
+  },
+  "setReverbEffect": {
+   "sig": "setReverbEffect(DEFAULT_REVERB_EFFECT, arg2, arg3, blendFactor)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "4"
+  },
+  "addSampleEffect": {
+   "sig": "addSampleEffect(soundSample, DEFAULT_REVERB_EFFECT)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "2"
+  },
+  "removeSampleEffect": {
+   "sig": "removeSampleEffect(soundSample, DEFAULT_REVERB_EFFECT)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "2"
+  },
+  "setSampleFrequencyFilter": {
+   "sig": "setSampleFrequencyFilter(soundSample, int, lowpassGain, int, lowpassCutoffFrequency, int, lowpassResonance)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "7"
+  },
+  "setSampleLoopSynthesisRPM": {
+   "sig": "setSampleLoopSynthesisRPM(soundSample, arg2, bool)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "3"
+  },
+  "setSampleLoopSynthesisLoadFactor": {
+   "sig": "setSampleLoopSynthesisLoadFactor(soundSample, arg2)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "setAudioGroupVolume": {
+   "sig": "setAudioGroupVolume(arg1, int)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "createSoundPlayer": {
+   "sig": "createSoundPlayer(string, appBasePath, webDataXMLFile, localDataXMLFilename, localFolder, userLocalFolder, languageShort, soundGroup)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "8"
+  },
+  "isSoundPlayerLoaded": {
+   "sig": "isSoundPlayerLoaded(soundPlayerId)",
+   "source": "observed",
+   "calls": 10,
+   "arity": "1"
+  },
+  "isSoundPlayerPlaying": {
+   "sig": "isSoundPlayerPlaying(soundPlayerId)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "getIsSoundPlayerChannelStreamed": {
+   "sig": "getIsSoundPlayerChannelStreamed(soundPlayerId, currentChannel)",
+   "source": "observed",
+   "calls": 6,
+   "arity": "2"
+  },
+  "getSoundPlayerChannelName": {
+   "sig": "getSoundPlayerChannelName(soundPlayerId, currentChannel)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "getSoundPlayerItemName": {
+   "sig": "getSoundPlayerItemName(soundPlayerId)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "getNumSoundPlayerChannels": {
+   "sig": "getNumSoundPlayerChannels(soundPlayerId)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "setSoundPlayerChannel": {
+   "sig": "setSoundPlayerChannel(soundPlayerId, currentChannel)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "2"
+  },
+  "setSoundPlayerItem": {
+   "sig": "setSoundPlayerItem(soundPlayerId, currentItem)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "2"
+  },
+  "getNumSoundPlayerItems": {
+   "sig": "getNumSoundPlayerItems(soundPlayerId)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "1"
+  },
+  "playSoundPlayer": {
+   "sig": "playSoundPlayer(soundPlayerId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "pauseSoundPlayer": {
+   "sig": "pauseSoundPlayer(soundPlayerId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getGameBasePath": {
+   "sig": "getGameBasePath()",
+   "source": "observed",
+   "calls": 7,
+   "arity": "0"
+  },
+  "setTextureStreamingMemoryBudget": {
+   "sig": "setTextureStreamingMemoryBudget(int)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "setDebugRenderingMode": {
+   "sig": "setDebugRenderingMode(NONE)",
+   "source": "observed",
+   "calls": 24,
+   "arity": "1"
+  },
+  "renderScreenshot": {
+   "sig": "renderScreenshot(mFilePath, resXi, resYi, aspectRatio, string, int, float, float, float, float, int, int, bool)",
+   "source": "observed",
+   "calls": 28,
+   "arity": "13"
+  },
+  "getDebugRenderingMode": {
+   "sig": "getDebugRenderingMode()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getFidelityFxSRQuality": {
+   "sig": "getFidelityFxSRQuality()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "getFidelityFxSRQualityName": {
+   "sig": "getFidelityFxSRQualityName(arg1)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "setFidelityFxSRQuality": {
+   "sig": "setFidelityFxSRQuality(arg1)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "createTerrainDeformation": {
+   "sig": "createTerrainDeformation(terrainNode)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "enableTerrainDeformationMode": {
+   "sig": "enableTerrainDeformationMode(terrainDeformationId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "enableAreaBasedTerrainDeformationMode": {
+   "sig": "enableAreaBasedTerrainDeformationMode(terrainDeformationId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "enableTerrainDeformationHeightAdditiveMode": {
+   "sig": "enableTerrainDeformationHeightAdditiveMode(terrainDeformationId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setTerrainDeformationHeightChangeAmount": {
+   "sig": "setTerrainDeformationHeightChangeAmount(terrainDeformationId, amount)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setTerrainDeformationHeightSetTarget": {
+   "sig": "setTerrainDeformationHeightSetTarget(terrainDeformationId, minY, maxY, nx, ny, nz, d)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "7"
+  },
+  "enableTerrainDeformationHeightSetMode": {
+   "sig": "enableTerrainDeformationHeightSetMode(terrainDeformationId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "enableTerrainDeformationHeightSmoothingMode": {
+   "sig": "enableTerrainDeformationHeightSmoothingMode(terrainDeformationId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "enableTerrainDeformationPaintingMode": {
+   "sig": "enableTerrainDeformationPaintingMode(terrainDeformationId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "clearTerrainDeformationAreas": {
+   "sig": "clearTerrainDeformationAreas(terrainDeformationId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "addTerrainDeformationWorldspaceSoftBrush": {
+   "sig": "addTerrainDeformationWorldspaceSoftBrush(terrainDeformationId, x, z, arg4, arg5, hardness, strength, NO_TERRAIN_BRUSH)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "8"
+  },
+  "addTerrainDeformationArea": {
+   "sig": "addTerrainDeformationArea(terrainDeformationId, x, y, z, side1X, side1Y, side1Z, side2X, side2Y, side2Z, NO_TERRAIN_BRUSH, writeBlockedAreaMap)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "12"
+  },
+  "addTerrainDeformationPolygonalArea": {
+   "sig": "addTerrainDeformationPolygonalArea(terrainDeformationId, vertexPositions, NO_TERRAIN_BRUSH, writeBlockedAreaMap)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "setTerrainDeformationOutsideAreaBrush": {
+   "sig": "setTerrainDeformationOutsideAreaBrush(terrainDeformationId, NO_TERRAIN_BRUSH)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setTerrainDeformationOutsideAreaConstraints": {
+   "sig": "setTerrainDeformationOutsideAreaConstraints(terrainDeformationId, maxSmoothDistance, arg3, maxEdgeAngle)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "getTerrainDeformationBlockedAreaMapSize": {
+   "sig": "getTerrainDeformationBlockedAreaMapSize(terrainDeformationId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setTerrainDeformationDynamicObjectCollisionMask": {
+   "sig": "setTerrainDeformationDynamicObjectCollisionMask(terrainDeformationId, collisionMask)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setTerrainDeformationDynamicObjectMaxDisplacement": {
+   "sig": "setTerrainDeformationDynamicObjectMaxDisplacement(terrainDeformationId, maxDisplacement)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setTerrainDeformationBlockedAreaMap": {
+   "sig": "setTerrainDeformationBlockedAreaMap(terrainDeformationId, bitVectorMapId, channel)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "setTerrainDeformationBlockedAreaMaxDisplacement": {
+   "sig": "setTerrainDeformationBlockedAreaMaxDisplacement(terrainDeformationId, maxDisplacement)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setTerrainDeformationTyreTrackSystem": {
+   "sig": "setTerrainDeformationTyreTrackSystem(terrainDeformationId, tireTrackSystemId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "applyTerrainDeformation": {
+   "sig": "applyTerrainDeformation(terrainDeformationId, previewOnly, callbackFunc, callbackObject, callbackArgs)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "cancelTerrainDeformation": {
+   "sig": "cancelTerrainDeformation(terrainDeformationId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "writeTerrainUpdateStream": {
+   "sig": "writeTerrainUpdateStream(terrainNode, streamId, streamId, maxPacketSize, x, y, z)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "7"
+  },
+  "readTerrainUpdateStream": {
+   "sig": "readTerrainUpdateStream(terrainNode, streamId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "findTrafficSystemBlockingPositionInformation": {
+   "sig": "findTrafficSystemBlockingPositionInformation(trafficSystemId, arg2, arg3, arg4, arg5, arg6, arg7, TRAFFIC_BLOCKING_NODE_MAX_DISTANCE)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "8"
+  },
+  "findPedestrianSystemBlockingPositionInformation": {
+   "sig": "findPedestrianSystemBlockingPositionInformation(pedestrianSystemId, arg2, arg3, arg4, arg5, arg6, arg7, TRAFFIC_BLOCKING_NODE_MAX_DISTANCE)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "8"
+  },
+  "findVehicleNavigationMapBlockingPositionInformation": {
+   "sig": "findVehicleNavigationMapBlockingPositionInformation(navigationMap, arg2, arg3, arg4, arg5, arg6, arg7, TRAFFIC_BLOCKING_NODE_MAX_DISTANCE)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "8"
+  },
+  "setTrafficSystemBlockingPositionState": {
+   "sig": "setTrafficSystemBlockingPositionState(trafficSystemId, arg2, splineTime, arg4)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "4"
+  },
+  "setPedestrianSystemBlockingPositionState": {
+   "sig": "setPedestrianSystemBlockingPositionState(pedestrianSystemId, arg2, splineTime, direction, arg5)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "5"
+  },
+  "setVehicleNavigationMapBlockingPositionState": {
+   "sig": "setVehicleNavigationMapBlockingPositionState(navigationMap, arg2, splineTime, arg4)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "4"
+  },
+  "createTrafficSystem": {
+   "sig": "createTrafficSystem(xmlFilename, transformId, useHighProfile, isServer, isClient, ENVIRONMENT)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "6"
+  },
+  "setTrafficSystemCollisionMasks": {
+   "sig": "setTrafficSystemCollisionMasks(trafficSystemId, groundMask, stopMask, playerStopMask, ignoreMask)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "setTrafficSystemUseOutdoorAudioSetup": {
+   "sig": "setTrafficSystemUseOutdoorAudioSetup(trafficSystemId, arg2)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "writeTrafficSystemToStream": {
+   "sig": "writeTrafficSystemToStream(trafficSystemId, streamId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "readTrafficSystemFromStream": {
+   "sig": "readTrafficSystemFromStream(trafficSystemId, streamId, g_clientInterpDelay, g_packetPhysicsNetworkTime, tickDuration)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "setTrafficSystemDaytime": {
+   "sig": "setTrafficSystemDaytime(trafficSystemId, dayTime)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setTrafficSystemNightTimeRange": {
+   "sig": "setTrafficSystemNightTimeRange(trafficSystemId, nightStart, nightEnd)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "setTrafficSystemEnabled": {
+   "sig": "setTrafficSystemEnabled(trafficSystemId, state)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "resetTrafficSystem": {
+   "sig": "resetTrafficSystem(trafficSystemId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "setTrafficSystemRenderCollisionGeometry": {
+   "sig": "setTrafficSystemRenderCollisionGeometry(trafficSystemId, debugIsEnabled)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "getAllowVoiceCommunicationWithUser": {
+   "sig": "getAllowVoiceCommunicationWithUser(uniqueUserId, platformUserId, platformId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "getAllowTextCommunicationWithUser": {
+   "sig": "getAllowTextCommunicationWithUser(uniqueUserId, platformUserId, platformId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "voiceChatGetRecordingMode": {
+   "sig": "voiceChatGetRecordingMode()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "voiceChatSetRecordingMode": {
+   "sig": "voiceChatSetRecordingMode(MUTED)",
+   "source": "observed",
+   "calls": 7,
+   "arity": "1"
+  },
+  "voiceChatSetUserPairBlocked": {
+   "sig": "voiceChatSetUserPairBlocked(getUniqueUserId, getUniqueUserId, isBlocked)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "getEmitterSurfaceSize": {
+   "sig": "getEmitterSurfaceSize(geometry)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "1"
+  },
+  "getSplitShapePlaneExtents": {
+   "sig": "getSplitShapePlaneExtents(curSplitShape, cx, cy, cz, nx, ny, nz)",
+   "source": "observed",
+   "calls": 7,
+   "arity": "7"
+  },
+  "voiceChatSetMasterVolume": {
+   "sig": "voiceChatSetMasterVolume(volume)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "voiceChatGetMasterVolume": {
+   "sig": "voiceChatGetMasterVolume()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "voiceChatSetRecordingVolume": {
+   "sig": "voiceChatSetRecordingVolume(volume)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "voiceChatGetRecordingVolume": {
+   "sig": "voiceChatGetRecordingVolume()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "voiceChatSetUserVolume": {
+   "sig": "voiceChatSetUserVolume(uuid, volume)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "voiceChatGetUserVolume": {
+   "sig": "voiceChatGetUserVolume(uuid)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "voiceChatGetHasRecordingDevice": {
+   "sig": "voiceChatGetHasRecordingDevice()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "getAllowVoiceCommunication": {
+   "sig": "getAllowVoiceCommunication(bool)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "1"
+  },
+  "voiceChatGetAutoActivationSensitivity": {
+   "sig": "voiceChatGetAutoActivationSensitivity()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "voiceChatSetAutoActivationSensitivity": {
+   "sig": "voiceChatSetAutoActivationSensitivity(value)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getVehicleCollisionDistance": {
+   "sig": "getVehicleCollisionDistance(positions, arg2, arg3, arg4, width, height, string, arg8, arg9, COLLISION_MASK, bool, bool, bool, bool)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "14"
+  },
+  "debugDrawVehicleCollision": {
+   "sig": "debugDrawVehicleCollision(positions, arg2, arg3, arg4, width, height)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "6"
+  },
+  "createVehicleNavigationAgent": {
+   "sig": "createVehicleNavigationAgent(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "12"
+  },
+  "enableVehicleNavigationAgentDebugRendering": {
+   "sig": "enableVehicleNavigationAgentDebugRendering(agentId, bool)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "2"
+  },
+  "setVehicleNavigationAgentTarget": {
+   "sig": "setVehicleNavigationAgentTarget(agentId, x, y, z, dirX, dirY, dirZ)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "7"
+  },
+  "setJointRotationLimitSpring": {
+   "sig": "setJointRotationLimitSpring(jointIndex, int, rotLimitSpring, rotLimitDamping)",
+   "source": "observed",
+   "calls": 12,
+   "arity": "4"
+  },
+  "setJointTranslationLimitSpring": {
+   "sig": "setJointTranslationLimitSpring(jointIndex, arg2, transLimitSpring, transLimitDamping)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "4"
+  },
+  "setJointPosition": {
+   "sig": "setJointPosition(arg1, int, arg3, arg4, arg5)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "5"
+  },
+  "removeTrafficSystemPlayer": {
+   "sig": "removeTrafficSystemPlayer(trafficSystemId, node)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "setMotorProperties": {
+   "sig": "setMotorProperties(motorizedNode, getMinRpm, getMaxRpm, getRotInertia, getDampingRateFullThrottle, getDampingRateZeroThrottleClutchEngaged, getDampingRateZeroThrottleClutchDisengaged, arg8, arg9)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "9"
+  },
+  "controlVehicle": {
+   "sig": "controlVehicle(motorizedNode, acceleratorPedal, maxSpeed, maxAcceleration, minMotorRotSpeed, maxMotorRotSpeed, maxMotorRotAcceleration, minGearRatio, maxGearRatio, maxClutchTorque, neededPtoTorque)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "11"
+  },
+  "setWheelShapeWidth": {
+   "sig": "setWheelShapeWidth(node, wheelShape, wheelShapeWidth, wheelShapeWidthOffset)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "setWheelShapeTerrainDisplacement": {
+   "sig": "setWheelShapeTerrainDisplacement(node, wheelShape, displacementScale)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "3"
+  },
+  "setWheelShapeAutoHoldBrakeForce": {
+   "sig": "setWheelShapeAutoHoldBrakeForce(node, wheelShape, autoHoldBrakeFactor)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "saveXMLFileTo": {
+   "sig": "saveXMLFileTo(handle, filepath)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "execute": {
+   "sig": "execute(cmdFilePath, string, workingDir, bool)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "4"
+  },
+  "getUserConfigDirectory": {
+   "sig": "getUserConfigDirectory()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "removeEventListener": {
+   "sig": "removeEventListener(ON_FILE_OPEN, g_currentMapToolkitOpenFileListener)",
+   "source": "observed",
+   "calls": 5,
+   "arity": "2"
+  },
+  "addEventListener": {
+   "sig": "addEventListener(ON_FILE_OPEN, arg2, target?)",
+   "source": "observed",
+   "calls": 4,
+   "arity": "2..3"
+  },
+  "setTerrainLayerAtWorldPos": {
+   "sig": "setTerrainLayerAtWorldPos(mTerrainID, mLayerId, arg3, mPosY, arg5, float)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "6"
+  },
+  "_publish": {
+   "sig": "_publish(arg1, filepath, arg3?)",
+   "source": "observed",
+   "calls": 7,
+   "arity": "2..3"
+  },
+  "onStart": {
+   "sig": "onStart()",
+   "source": "observed",
+   "calls": 1,
+   "arity": "0"
+  },
+  "onFileOpen": {
+   "sig": "onFileOpen(filepath)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "onFileImported": {
+   "sig": "onFileImported(filepath, nodes, asReference)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "onSave": {
+   "sig": "onSave(filepath)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "onSelectionChanged": {
+   "sig": "onSelectionChanged(nodeId, isSelected)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "onNodeCloned": {
+   "sig": "onNodeCloned(cloneNodeId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "onNodeDeleted": {
+   "sig": "onNodeDeleted(deletedNodeId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "buildAbsolutePath": {
+   "sig": "buildAbsolutePath(scripts, filename)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "openFileDialog": {
+   "sig": "openFileDialog(arg1, string)",
+   "source": "observed",
+   "calls": 3,
+   "arity": "2"
+  },
+  "openDirDialog": {
+   "sig": "openDirDialog(getValue)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "refreshViewport": {
+   "sig": "refreshViewport(bool?, int?)",
+   "source": "observed",
+   "calls": 47,
+   "arity": "0..2"
+  },
+  "buildRelativePath": {
+   "sig": "buildRelativePath(modDescPath, filename)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "getTerrainNumOfInfoLayers": {
+   "sig": "getTerrainNumOfInfoLayers(g_terrainNode)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "1"
+  },
+  "getTerrainInfoLayerName": {
+   "sig": "getTerrainInfoLayerName(g_terrainNode, i)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "showBitMaskDialog": {
+   "sig": "showBitMaskDialog(string, collisionMask, nil, labels, descriptions)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "5"
+  },
+  "getTerrainInfoLayerLayerGroupOptionValue": {
+   "sig": "getTerrainInfoLayerLayerGroupOptionValue(g_terrainNode, layerIndex, int, arg4)",
+   "source": "observed",
+   "calls": 2,
+   "arity": "4"
+  },
+  "getTerrainInfoLayerNumOfLayerGroups": {
+   "sig": "getTerrainInfoLayerNumOfLayerGroups(g_terrainNode, value)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "2"
+  },
+  "getTerrainInfoLayerLayerGroupNumOfOptions": {
+   "sig": "getTerrainInfoLayerLayerGroupNumOfOptions(g_terrainNode, value, groupId)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "3"
+  },
+  "getTerrainInfoLayerLayerGroupOptionName": {
+   "sig": "getTerrainInfoLayerLayerGroupOptionName(g_terrainNode, value, groupId, i)",
+   "source": "observed",
+   "calls": 1,
+   "arity": "4"
+  },
+  "refreshPanels": {
+   "sig": "refreshPanels()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  },
+  "startUpdateLoop": {
+   "sig": "startUpdateLoop()",
+   "source": "observed",
+   "calls": 2,
+   "arity": "0"
+  }
+ }
+}

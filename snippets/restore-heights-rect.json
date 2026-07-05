@@ -1,0 +1,12 @@
+{
+  "name": "restore-heights-rect",
+  "description": "write back the heights snapshotted by capture-heights-rect, then clear the buffer",
+  "lua": "if __mcpHB == nil then return \"[ERR] nothing captured -- run capture-heights-rect first\" end local terr = g_terrainNode if terr == nil or not entityExists(terr) then local r = getRootNode() for i = 0, getNumOfChildren(r) - 1 do local c = getChildAt(r, i) if getName(c) == \"terrain\" then terr = c break end end end local b = __mcpHB local i = 1 for x = b.x1, b.x2, b.step do for z = b.z1, b.z2, b.step do setTerrainHeightAtWorldPos(terr, x, 0, z, b.h[i]) i = i + 1 end end __mcpHB = nil return \"restored \" .. (i - 1) .. \" heights\"",
+  "params": [],
+  "created": "2026-07-03 23:09:11",
+  "ge_version": "10.0.13",
+  "runs": 2,
+  "failures": 0,
+  "last_ok": true,
+  "last_run": "2026-07-04 00:29:23"
+}

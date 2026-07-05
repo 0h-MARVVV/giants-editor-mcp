@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+backups/
+*.bak
+*.egg-info/
+build/
+dist/
+# personal snippet packs stay local unless explicitly shared
+snippets/*.local.json
+# per-machine settings (game dir etc.)
+ge-mcp.config.json
+map_backups/
+known_functions.full.json

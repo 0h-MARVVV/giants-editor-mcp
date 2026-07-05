@@ -1,0 +1,29 @@
+{
+  "name": "capture-heights-rect",
+  "description": "snapshot terrain heights in a rectangle into _G.__mcpHB (pair with restore-heights-rect)",
+  "lua": "local terr = g_terrainNode if terr == nil or not entityExists(terr) then local r = getRootNode() for i = 0, getNumOfChildren(r) - 1 do local c = getChildAt(r, i) if getName(c) == \"terrain\" then terr = c break end end end __mcpHB = {x1=ARGS.x1, z1=ARGS.z1, x2=ARGS.x2, z2=ARGS.z2, step=ARGS.step, h={}} local i = 1 for x = ARGS.x1, ARGS.x2, ARGS.step do for z = ARGS.z1, ARGS.z2, ARGS.step do __mcpHB.h[i] = getTerrainHeightAtWorldPos(terr, x, 0, z) i = i + 1 end end return \"captured \" .. (i - 1) .. \" heights in (\" .. ARGS.x1 .. \",\" .. ARGS.z1 .. \")..(\" .. ARGS.x2 .. \",\" .. ARGS.z2 .. \")\"",
+  "params": [
+    {
+      "name": "x1"
+    },
+    {
+      "name": "z1"
+    },
+    {
+      "name": "x2"
+    },
+    {
+      "name": "z2"
+    },
+    {
+      "name": "step",
+      "default": 0.5
+    }
+  ],
+  "created": "2026-07-03 23:09:11",
+  "ge_version": "10.0.13",
+  "runs": 2,
+  "failures": 0,
+  "last_ok": true,
+  "last_run": "2026-07-04 00:29:06"
+}

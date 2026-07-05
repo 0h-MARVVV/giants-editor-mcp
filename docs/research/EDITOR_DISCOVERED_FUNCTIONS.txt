@@ -1,0 +1,181 @@
+================================================================================
+GIANTS Editor  editor.exe  (v10.0.12, FS25)  --  DISCOVERED FUNCTIONS & OPTIONS
+================================================================================
+Source : live Ghidra analysis of editor.exe (PID 16924), image base 0x140000000.
+Date   : 2026-06-14
+NOTE   : The binary is STRIPPED. There are no symbols, so unnamed functions are
+         shown as FUN_<address> (Ghidra auto-names). camelCase names are real Lua
+         binding strings found in .rdata. Helper-function roles marked "(inferred)"
+         were deduced from decompilation, not from symbols.
+Companion: EDITOR_BINARY_NOTES.md (the curated write-up + recommendations).
+
+--------------------------------------------------------------------------------
+1.  DEBUGGER / TRANSPORT FUNCTIONS  (the only native socket path)
+--------------------------------------------------------------------------------
+FUN_14036cd30   UDP discovery beacon. socket(AF_INET=2, SOCK_DGRAM=2, IPPROTO_UDP=17),
+                SO_BROADCAST, broadcasts payload "Lua debug server" (16 bytes) on
+                port 0xEFE0 (= 61408; value passed to bind wrapper FUN_1404633a0).
+                Loops ~100 ticks waiting for a debugger to answer, then connects.
+FUN_14036c890   DebuggerManager TCP connect. getaddrinfo(host @ this+0x0d) -> picks
+                AF_INET -> connect -> allocates 0x1e8-byte debugger object ->
+                spawns comms thread FUN_14036d130. Logs "Remote Debugger: %s %s".
+                Gated by "debugging enabled" flag at object+0x64.
+FUN_14036d1f0   Lua binding  startDebugging(addr).  Pops a MessageBox
+                "Click OK to connect to GIANTS Studio or Cancel to continue",
+                then connects OUTWARD to addr; retries via "Connection Failed"
+                dialog. Gated by flags +0x64 and +0x66.
+FUN_14036d130   Debugger comms thread procedure (handles send/recv + remote EXEC).
+
+Callers of FUN_14036c890 (entry points into the debugger connect):
+   FUN_14036d1f0    startDebugging (above)
+   FUN_14036cd30    after UDP discovery
+   FUN_140573f50    (inferred) another start/command path
+   FUN_1406455c0    (inferred) another start/command path
+   1401721ec        (inferred) startup-region caller
+
+Supporting functions seen inside the above (roles inferred):
+   FUN_1404633a0    bind() wrapper (socket, port)
+   FUN_1403f4c70    connect() wrapper (obj, port, port16)
+   FUN_1403f3290    construct debugger object from hostname
+   FUN_1403f7790    poll/recv during discovery
+   FUN_140336ea0    spawn thread (takes thread proc, e.g. FUN_14036d130)
+   FUN_1411d7a78    allocator
+   FUN_1400d3c60 / FUN_1400d3d00 / FUN_14010eb10   log/print helpers
+
+--------------------------------------------------------------------------------
+2.  LUA BINDINGS DISCOVERED  (real camelCase names, with .rdata address)
+--------------------------------------------------------------------------------
+0x14218d0d0   startDebugging                 (connect editor to a remote debugger)
+0x14218cc40   saveScreenshot                 ** visual feedback for the MCP **
+0x14218ce48   renderScreenshot               ** undocumented-but-live; visual feedback **
+0x14218ce60   render360Screenshot
+0x14218ce78   renderMultiviewportScreenshot
+0x14218cc50   setEnableHDRScreenshot
+0x14218da30   loadI3DFile                    (+ "LoadI3DFailedReason" @0x142197820)
+0x14211f1f0   setDebugRenderingMode
+0x14211f208   getDebugRenderingMode
+NOTE: the MCP already enumerates ALL live _G functions at runtime, so this list is
+      a curated highlight, not the full API. Binding strings carry no signatures.
+
+--------------------------------------------------------------------------------
+3.  CONSOLE COMMANDS / OPTIONS  (engine dev console; NOT Lua-extensible/remote)
+--------------------------------------------------------------------------------
+0x141fad528   open_console
+0x141fad4c0   close_console
+0x141fad4d0   echo_console
+0x141fad518   noecho_console
+   (Menu strings: "&Console", "GIANTS Windows console", "Console Windows GIANTS".)
+   No addConsoleCommand-style Lua binding found; the console is hardcoded.
+
+--------------------------------------------------------------------------------
+4.  DEBUG / CONFIG OPTIONS  (startup/config tokens)
+--------------------------------------------------------------------------------
+0x141f7aa30   debug_level     -- "debug level (1=errors, 2=trace)"
+0x141f7aa60   debug_file      -- "debugging filename)"
+              "Setting debug level to %d"  /  "Setting debug file to %s"
+0x141f7aa40   "debug level (1=errors, 2=trace)"
+
+--------------------------------------------------------------------------------
+5.  SCREENSHOT OPTIONS / SLOTS
+--------------------------------------------------------------------------------
+0x1420d2190   "screenshot%d"
+0x142143d58..0x142143d08   screenshot0, screenshot1, ... screenshot5  (slots)
+0x142144c18   "%s.screenshot(%u)"
+0x142144c30   "%s.screenshots"
+0x142188870   "Warning: HDR screenshot mode must be enabled with setEnableHDRScreenshot(true)."
+   Failure strings: "Screenshot functionality unavailable: Vulkan QFOT code path
+   not implemented." / "...swapchain doesn't support transfer operation." /
+   "Failed to make screenshot: Vulkan operation timed out."
+
+--------------------------------------------------------------------------------
+6.  DEBUG RENDERING
+--------------------------------------------------------------------------------
+0x14211f1f0   setDebugRenderingMode
+0x14211f208   getDebugRenderingMode
+0x14211f308   "DebugRendering"
+   Editor menu toggles seen: "Enable debug draw", "Debug Display", "Debug Masks",
+   "Toggle DDGI Debug grid visualization", "Clear Debug Masks", "Debug Disable Autoclear".
+
+--------------------------------------------------------------------------------
+7.  NETWORKING IMPORTS  (ws2_32 -- full Winsock 2 stack is linked)
+--------------------------------------------------------------------------------
+WSAStartup WSACleanup WSAGetLastError WSASetLastError WSAIoctl
+WSACreateEvent WSACloseEvent WSAResetEvent WSASetEvent WSAEventSelect
+WSAWaitForMultipleEvents WSAEnumNetworkEvents WSASendTo WSARecvFrom __WSAFDIsSet
+socket bind listen accept connect shutdown closesocket select
+send recv sendto recvfrom setsockopt getsockopt ioctlsocket
+getaddrinfo freeaddrinfo getnameinfo gethostname gethostbyaddr
+getpeername getsockname inet_addr inet_ntoa htons htonl ntohs ntohl
+GetAdaptersInfo   (iphlpapi)
+
+--------------------------------------------------------------------------------
+8.  OTHER IPC-RELEVANT IMPORTS
+--------------------------------------------------------------------------------
+Pipes/proc : CreatePipe PeekNamedPipe CreateProcessA CreateProcessW DuplicateHandle
+             GetExitCodeProcess CreateJobObjectW AssignProcessToJobObject
+DDE (wx)   : DdeInitializeW DdeConnect DdeClientTransaction DdeNameService
+             DdePostAdvise ...   (single-instance / file-open; not a command channel)
+Crypto     : BCryptGenRandom BCryptEncrypt BCryptDecrypt CryptAcquireContextW
+             Cert* (certificate stores)  -- used by the HTTPS/network stack
+Shell      : ShellExecuteW CommandLineToArgvW SHGetKnownFolderPath
+
+--------------------------------------------------------------------------------
+9.  RTTI CLASS NAMES DISCOVERED
+--------------------------------------------------------------------------------
+.?AVlua_exception@@
+.?AVINetSocket@@                              (native socket wrapper; debugger/curl)
+.?AVStopDebuggingListener@DebuggerManager@@
+.?AVDPU_Debugger@@
+wx: .?AVwxAppConsole@@ .?AVwxConsoleAppTraits@@ .?AVwxConsoleEventLoop@@
+    .?AVwxDummyConsoleApp@@  (+ wxDDEServer)
+
+--------------------------------------------------------------------------------
+10. KEY DEBUGGER-PROTOCOL STRINGS  (for anyone implementing the GIANTS Studio side)
+--------------------------------------------------------------------------------
+0x142147700   "Lua debug server"
+0x1421476e8   "GIANTS DebuggerManager"
+0x1421476d0   "Remote Debugger: %s %s\n"
+0x142147718   "Remote Debugger: connection closed\n"
+0x142147848   "Remote Debugger: Debugging is disabled.\n"
+0x1421477c0   "Remote Debugger: Debugging is disabled in the current game mode. ..."
+0x142147878   "Remote Debugger: failed to map '%s' to an IP address.\n"
+0x1421500b0   "Debugger connected:\n"
+0x1421500c8   "  Debugger hook: %s\n"
+0x14215b940   "GIANTS LuaDebuggerNetworkSend"
+0x14215b960   "GIANTS LuaDebuggerNetworkRecv"
+0x1421604e0   "break into debugger (EXEC)"      <- remote code execution
+0x142160348   "break into debugger (non-EXEC)"
+0x142189468   "Warning: Debugger disabled multiplayer.\n"
+
+--------------------------------------------------------------------------------
+11. PLATFORM / STATICALLY-LINKED LIBRARIES
+--------------------------------------------------------------------------------
+GUI    : wxWidgets 3.2.2.1   ("C:\src\bin\wxWidgets-3.2.2.1\...")
+HTTP   : libcurl + OpenSSL    (client only: HTTP/2, SOCKS4/5, FTP strings present)
+Lua    : statically linked, GIANTS-extended / Luau-style (see section 12)
+Other  : FBX SDK (FbxLogMsg...), Vulkan + D3D11 + OpenGL render backends, SDL
+
+--------------------------------------------------------------------------------
+12. LUA RUNTIME EXTENSIONS  (GIANTS/Luau additions beyond stock Lua 5.x)
+    Reference string blocks @ 0x1420bf6f0 and 0x1420bfb00
+--------------------------------------------------------------------------------
+table.create  table.find  table.clear  table.freeze  table.isfrozen  table.clone
+table.move  table.pack  table.unpack  table.foreach  table.foreachi  table.maxn
+table.ifilter table.filter table.size table.equalLists table.toSet table.toList
+table.equalSets table.isSubset table.isProperSubset table.concatKeys table.isList
+table.addElement table.removeElement table.hasElement table.copyIndex
+table.getRandomElement table.findListElementFirstIndex table.getSetUnion
+table.getListUnion table.getSetSubtraction table.getSetIntersection
+string.split  string.startsWith  string.endsWith  string.trim  string.ltrim
+string.rtrim  string.findLast  string.contains  string.namedFormat  string.getVector
+string.getRadians  string.isNilOrWhitespace  string.concatFiltered  string.pack/unpack
+math.sign  math.clamp  math.round  math.noise  (+ stock math.*)
+bit32.arshift band bnot bor bxor btest extract lrotate lshift replace rrotate
+       rshift countlz countrz
+debug.info  debug.traceback
+Editor output globals: print  printError  printWarning  printDevError
+       printDevWarning  printCallstack  print_r
+
+================================================================================
+END
+================================================================================
