@@ -1,9 +1,9 @@
 # Tool reference
 
 Generated from ge-mcp 1.0.0 — do not edit by hand (run `python scripts/docgen.py`).
-**59 tools** in 12 groups. Toggle groups with the `GE_MCP_GROUPS` env var.
+**60 tools** in 12 groups. Toggle groups with the `GE_MCP_GROUPS` env var.
 
-## Group `assets` (2 tools)
+## Group `assets` (3 tools)
 
 Game-asset catalog ($data) and mod validation -- mostly disk-side.
 
@@ -38,7 +38,23 @@ placeable_validate (path)  one placeable XML: root/type, base i3d resolves,
 fruit_types / fill_types   name lists from the game's maps config XMLs
 
 Built from real FS22->FS25 conversion experience -- run validate before
-zipping a mod, placeable_validate on converted placeables.
+zipping a mod, placeable_validate on converted placeables. For the full
+set of VALID elements/attributes of any FS25 XML type, use xml_schema
+(the game's own XSDs) rather than guessing.
+
+### `xml_schema(action='list', name='', element='', depth=4, limit=120)`
+
+The GROUND TRUTH for FS25 XML: the game's own schemas from <game>/shared/xml/schema (88 XSDs -- placeable, vehicle, fields, farmlands, foliageType, fillTypes, fence, ...). CONSULT THIS before writing or editing any FS25 XML instead of guessing element/attribute names. Actions:
+
+list                 every schema file available
+show (name)          element tree of one schema: every element with its
+                     attributes, types, enums, required flags
+show (name, element) just the subtree of elements whose name contains
+                     `element` (use for huge schemas like vehicle)
+
+Matching human-readable HTML lives in <game>/shared/xml/documentation.
+Types shown are GIANTS' own (Float, Angle, 'String or l10n key', enums
+listed inline). depth/limit cap the outline; refine with `element`.
 
 ## Group `core` (9 tools)
 

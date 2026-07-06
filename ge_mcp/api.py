@@ -35,7 +35,7 @@ from .tools.fields import field_ops, farmland_ops, info_layer_ops     # noqa: F4
 from .tools.hygiene import audit_ops, batch_ops, i3d_query            # noqa: F401
 from .tools.materials import material_ops                             # noqa: F401
 from .tools.traffic import traffic_ops                                # noqa: F401
-from .tools.assets import asset_ops, mod_ops                          # noqa: F401
+from .tools.assets import asset_ops, mod_ops, xml_schema              # noqa: F401
 from .tools.vision import (viewport_screenshot, camera_look, camera_topdown,  # noqa: F401
                            camera_orbit, debug_view, read_log)
 from .tools.scene import save_scene, backup_scene                     # noqa: F401

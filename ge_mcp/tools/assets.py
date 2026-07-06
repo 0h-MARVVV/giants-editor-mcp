@@ -146,7 +146,9 @@ def mod_ops(action: str, path: str = "") -> str:
     fruit_types / fill_types   name lists from the game's maps config XMLs
 
     Built from real FS22->FS25 conversion experience -- run validate before
-    zipping a mod, placeable_validate on converted placeables.
+    zipping a mod, placeable_validate on converted placeables. For the full
+    set of VALID elements/attributes of any FS25 XML type, use xml_schema
+    (the game's own XSDs) rather than guessing.
     """
     if action in ("fruit_types", "fill_types"):
         return _game_types(action)
@@ -308,7 +310,144 @@ def _game_types(action):
     return "[ERR] " + fname + " not found/parsable under $data"
 
 
-TOOLS = [asset_ops, mod_ops]
+# ---- FS25 XML schema reference (shared/xml -- unencrypted, every install) ------
+_XSD_NS = "{http://www.w3.org/2001/XMLSchema}"
+
+
+def xml_schema(action: str = "list", name: str = "", element: str = "",
+               depth: int = 4, limit: int = 120) -> str:
+    """The GROUND TRUTH for FS25 XML: the game's own schemas from
+    <game>/shared/xml/schema (88 XSDs -- placeable, vehicle, fields, farmlands,
+    foliageType, fillTypes, fence, ...). CONSULT THIS before writing or editing
+    any FS25 XML instead of guessing element/attribute names. Actions:
+
+    list                 every schema file available
+    show (name)          element tree of one schema: every element with its
+                         attributes, types, enums, required flags
+    show (name, element) just the subtree of elements whose name contains
+                         `element` (use for huge schemas like vehicle)
+
+    Matching human-readable HTML lives in <game>/shared/xml/documentation.
+    Types shown are GIANTS' own (Float, Angle, 'String or l10n key', enums
+    listed inline). depth/limit cap the outline; refine with `element`.
+    """
+    data, err = _game_data()
+    if err:
+        return err
+    xml_dir = data.parent / "shared" / "xml" / "schema"
+    if not xml_dir.is_dir():
+        return "[ERR] schema folder not found: " + str(xml_dir)
+
+    if action == "list":
+        names = sorted(p.stem for p in xml_dir.glob("*.xsd"))
+        return (str(len(names)) + " FS25 XML schema(s) in shared/xml/schema "
+                "(xml_schema show <name> for the element tree):\n  "
+                + ", ".join(names))
+
+    if action != "show":
+        return "[ERR] unknown action '" + action + "'. Actions: list, show"
+    if not name:
+        return "[ERR] name required (see action=list)"
+    path = xml_dir / (name if name.endswith(".xsd") else name + ".xsd")
+    if not path.is_file():
+        cands = [p.stem for p in xml_dir.glob("*.xsd") if name.lower() in p.stem.lower()]
+        if len(cands) == 1:
+            path = xml_dir / (cands[0] + ".xsd")
+        else:
+            return ("[ERR] no schema '" + name + "'"
+                    + (". Close matches: " + ", ".join(cands[:8]) if cands else ". See action=list"))
+    try:
+        root = ET.parse(path).getroot()
+    except Exception as exc:
+        return "[ERR] parse failed: " + str(exc)
+
+    # simpleType name -> human description (GIANTS typeStr or enum values)
+    types = {}
+    for st in root.findall(_XSD_NS + "simpleType"):
+        nm = st.get("name")
+        if not nm:
+            continue
+        enums = [e.get("value") for e in st.iter(_XSD_NS + "enumeration")]
+        if enums:
+            types[nm] = "[" + "|".join(enums[:12]) + ("|..." if len(enums) > 12 else "") + "]"
+            continue
+        desc = None
+        for ai in st.iter(_XSD_NS + "appinfo"):
+            for child in ai:
+                if child.tag.endswith("typeStr") and (child.text or "").strip():
+                    desc = child.text.strip()
+        types[nm] = desc or nm.replace("g_", "")
+
+    def type_str(t):
+        if not t:
+            return "?"
+        return types.get(t, t.replace("xs:", ""))
+
+    named_ct = {ct.get("name"): ct for ct in root.findall(_XSD_NS + "complexType") if ct.get("name")}
+    focus = element.lower().strip()
+    lines, clipped = [], [False]
+
+    def emit(s):
+        if len(lines) >= limit:
+            clipped[0] = True
+            return False
+        lines.append(s)
+        return True
+
+    def walk(el, path_str, d, forced):
+        nm = el.get("name") or el.get("ref") or "?"
+        here = (path_str + "." + nm) if path_str else nm
+        hit = not focus or focus in nm.lower() or forced
+        ct = None
+        t = el.get("type")
+        if t and t in named_ct:
+            ct = named_ct[t]
+        for child in el:
+            if child.tag == _XSD_NS + "complexType":
+                ct = child
+        if hit:
+            attrs = []
+            if ct is not None:
+                # direct children only -- iter() would hoover up every nested
+                # element's attributes into the parent line
+                for a in ct.findall(_XSD_NS + "attribute"):
+                    astr = a.get("name") + "=" + type_str(a.get("type"))
+                    if a.get("use") == "required":
+                        astr += " (required)"
+                    if a.get("default") is not None:
+                        astr += " (default " + a.get("default") + ")"
+                    attrs.append(astr)
+            occurs = ""
+            if el.get("maxOccurs") == "unbounded":
+                occurs = "  (repeatable)"
+            elif el.get("minOccurs") == "0":
+                occurs = "  (optional)"
+            if not emit("  " * min(d, 8) + "<" + nm + ">" + occurs):
+                return
+            for a in attrs:
+                if not emit("  " * min(d, 8) + "   @" + a):
+                    return
+        if ct is not None and d < depth:
+            for seq in ct:
+                if seq.tag in (_XSD_NS + "sequence", _XSD_NS + "choice", _XSD_NS + "all"):
+                    for sub in seq:
+                        if sub.tag == _XSD_NS + "element":
+                            walk(sub, here, d + 1, hit and bool(focus))
+
+    for top in root.findall(_XSD_NS + "element"):
+        walk(top, "", 0, False)
+
+    if not lines:
+        return ("no elements match '" + element + "' in " + path.stem
+                + " at depth " + str(depth) + " -- try a different element or higher depth")
+    head = (path.stem + ".xsd" + (" (elements matching '" + element + "')" if focus else "")
+            + " -- depth " + str(depth) + ":")
+    tail = ("\n  ... (output capped at " + str(limit) + " lines; use element= to narrow, "
+            "or raise limit/depth)") if clipped[0] else ""
+    return head + "\n" + "\n".join(lines) + tail
+
+
+TOOLS = [asset_ops, mod_ops, xml_schema]
 
 
 def register(mcp):

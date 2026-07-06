@@ -128,7 +128,7 @@ only applies when you confirm. Placements land in one group — delete it to und
 - `fields` — create fields from splines, ground/fruit painting, farmland ownership + audit, generic info layers
 - `hygiene` — scene/file-reference/texture/collision/light audits, batch rename/clean/array/replace, XPath into the i3d
 - `materials` / `traffic` — shader parameter work; traffic-spline validation (convention-aware)
-- `assets` — the `$data` catalog: search, inspect, place; modDesc + placeable validation, fruit/fill types
+- `assets` — the `$data` catalog: search, inspect, place; modDesc + placeable validation, fruit/fill types; `xml_schema` — the game's own 88 XSDs as a browsable reference (every valid element/attribute/enum for any FS25 XML type)
 - `vision` — screenshots into chat, camera aiming/orbit/top-down tiles, 39 debug render modes, editor log
 - `scene` — verified save (Ctrl+S + ON_SAVE confirmation), timestamped map backups
 - `snippets` — save/run/list proven Lua at zero schema cost

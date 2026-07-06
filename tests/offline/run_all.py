@@ -197,12 +197,12 @@ def test_registration():
     from ge_mcp.server import enabled_groups
     expected = {"core": 9, "splines": 5, "terrain": 11, "nodes": 13,
                 "fields": 3, "hygiene": 3, "materials": 1, "traffic": 1,
-                "assets": 2, "vision": 6, "scene": 2, "snippets": 3}
+                "assets": 3, "vision": 6, "scene": 2, "snippets": 3}
     for g, n in expected.items():
         check(f"group {g} has {n} tools", len(GROUPS[g].TOOLS) == n,
               str(len(GROUPS[g].TOOLS)))
     total = sum(len(m.TOOLS) for m in GROUPS.values())
-    check("total 59", total == 59, str(total))
+    check("total 60", total == 60, str(total))
     old = os.environ.get("GE_MCP_GROUPS")
     try:
         os.environ["GE_MCP_GROUPS"] = "splines"
