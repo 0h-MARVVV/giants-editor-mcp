@@ -15,4 +15,4 @@ Package layout:
   api.py         flat facade of every tool for direct-python testing
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"

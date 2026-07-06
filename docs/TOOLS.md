@@ -1,6 +1,6 @@
 # Tool reference
 
-Generated from ge-mcp 1.0.0 — do not edit by hand (run `python scripts/docgen.py`).
+Generated from ge-mcp 1.0.1 — do not edit by hand (run `python scripts/docgen.py`).
 **60 tools** in 12 groups. Toggle groups with the `GE_MCP_GROUPS` env var.
 
 ## Group `assets` (3 tools)

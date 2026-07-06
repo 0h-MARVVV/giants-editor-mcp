@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.0.1 — 2026-07-05
+
+- **`xml_schema`** (60th tool): browse the game's own 88 XSD schemas from
+  `shared/xml/schema` — the complete, version-true reference of every valid
+  element, attribute, type, enum and default for any FS25 XML (placeable,
+  vehicle, fields, farmlands, ...). Agents are directed here before writing
+  XML instead of guessing.
+- Docs recommend **fs25-skills** by Paint-a-Farm as the knowledge companion,
+  with per-client install commands in the setup flow.
+- Bug reports route to the GitHub issues page; release ritual corrections.
+
 ## 1.0.0 — 2026-07-04
 
 First public release.
