@@ -50,13 +50,19 @@ git checkout main
 
 ## 4. Push + GitHub release
 
-With GitHub CLI (`winget install GitHub.cli`, then `gh auth login`, once):
+With GitHub CLI (`winget install GitHub.cli`, then `gh auth login`, once).
+NOTE: in cmd.exe use `cd /d D:\...` — plain `cd` does not switch drives.
 
 ```
-gh repo create giants-editor-mcp --public --source . --push --branch public   [first time]
-git push origin public:main                                                   [updates]
-gh release create v<ver> ..\ge-mcp-<ver>.mcpb ..\ge-mcp-<ver>.zip --title "ge-mcp <ver>" --notes-file CHANGELOG.md
+git checkout public
+git push origin public:main
+git checkout main
+gh release create v<ver> ..\ge-mcp-<ver>.mcpb ..\ge-mcp-<ver>.zip --title "ge-mcp <ver>" --notes "..."
 ```
+
+[first time the repo was created with:
+`gh repo create giants-editor-mcp --public --source . --remote origin`
+then `git push -u origin public:main` — there is NO --branch flag on repo create]
 
 Web alternative: github.com → New repository (public, empty) →
 `git remote add origin https://github.com/<user>/giants-editor-mcp.git` →

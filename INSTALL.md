@@ -140,6 +140,29 @@ The FS25 game dir auto-detects from the editor's own preferences. If it shows
 "not found", ask Claude: `run setup with game_dir "D:\path\to\Farming Simulator 25"` —
 validated and remembered.
 
+## Recommended companion — the FS25 knowledge pack
+
+ge-mcp gives Claude *hands* in the editor; **[fs25-skills by
+Paint-a-Farm](https://github.com/Paint-a-Farm/fs25-skills)** gives it FS25
+*knowledge* (modDesc standards, Lua patterns, i3d/DDS formats, packaging,
+debugging). They're made for each other — install both and Claude knows the
+conventions AND can act on them.
+
+**Claude Code** (two slash commands, once):
+
+```
+/plugin marketplace add paint-a-farm/fs25-skills
+/plugin install fs25-modding
+```
+
+**Cursor**: Rules & Command → Project Rules → Add Rule → Remote Rule (GitHub) →
+`https://github.com/paint-a-farm/fs25-skills.git`
+
+**Other agents** (needs bun): `bunx skills add paint-a-farm/fs25-skills`
+
+(Claude Desktop has no skills installer today — Desktop users lose nothing:
+ge-mcp's tool descriptions carry the editor knowledge Claude needs to drive it.)
+
 ## Your first session
 
 Things to say to Claude once `setup` is green (also see the README's

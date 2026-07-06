@@ -149,6 +149,14 @@ run_snippet("find-high-clip", "limit=500")
 Unlimited saved scripts, zero added schema cost, and `snippets/` is plain JSON —
 swap packs with other modders.
 
+## Pairs well with
+
+**[fs25-skills](https://github.com/Paint-a-Farm/fs25-skills)** by Paint-a-Farm —
+AI-agent knowledge for FS25 modding (modDesc standards, Lua patterns, i3d/DDS
+formats, packaging, debugging). That pack teaches your agent the conventions;
+ge-mcp lets it act inside the live editor. Claude Code users: two slash
+commands install it (see [INSTALL.md](INSTALL.md#recommended-companion--the-fs25-knowledge-pack)).
+
 ## Compatibility
 
 GIANTS Editor 10.x / FS25 on Windows. Tested on 10.0.13. Editor updates don't
@@ -157,9 +165,10 @@ break the bridge (paths auto-detect); new editor APIs appear via `refresh_api`.
 ## Something broke?
 
 Ask Claude to run `setup` (it names the broken link) and `read_log 40 errors`,
-then send MARVVV both outputs plus your GE version and what you asked for.
-Most "nothing works" reports are one of the first three rows of the
-[troubleshooting table](INSTALL.md#troubleshooting).
+then open an issue at
+<https://github.com/0h-MARVVV/giants-editor-mcp/issues> with both outputs,
+your GE version, and what you asked for. Most "nothing works" reports are one
+of the first three rows of the [troubleshooting table](INSTALL.md#troubleshooting).
 
 Not affiliated with GIANTS Software. MIT licensed — see [LICENSE](LICENSE).
 Inspired by the community's editor panel scripts (spline paint/height/foliage
